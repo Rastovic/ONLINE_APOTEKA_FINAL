@@ -55,7 +55,7 @@ public class Pharmacy {
 
 	@OneToOne
 	@JoinColumn(name="roles_id", nullable=false)
-	private Roles roles;
+	private Role roles;
 	
 	
 	

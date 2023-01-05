@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.online.apoteka_final.entity.User;
 
-@RepositoryRestResource(collectionResourceRel = "User",path = "user")
+@RepositoryRestResource(collectionResourceRel = "user",path = "user")
 @CrossOrigin("http://localhost:4200")
 public interface UserRepository extends JpaRepository<User, Integer> {
 

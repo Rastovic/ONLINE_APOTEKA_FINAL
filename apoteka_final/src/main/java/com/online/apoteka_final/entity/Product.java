@@ -1,6 +1,9 @@
 package com.online.apoteka_final.entity;
 
-import jakarta.persistence.*;
+import java.util.Date;
+import java.util.List;
+
+import javax.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -25,8 +28,9 @@ public class Product {
 	
 	@Column(name="price")
 	private float price;
-	
-	
+	@Column(name="expiration_date")
+	private Date expiration_date;
+
 	@Column(name="availability")
 	private boolean availability;
 	
@@ -37,8 +41,11 @@ public class Product {
 	@JoinColumn(name = "supplier_id", nullable = false)
 	private Supplier supplier;
 	
-	@Column(name="pharmacy_id")
-	private int pharmacy_id;
+	@ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.DETACH,CascadeType.REFRESH,CascadeType.MERGE})
+	@JoinTable(name="pharmacy_product",
+				joinColumns = @JoinColumn(name="product_id"),
+				inverseJoinColumns = @JoinColumn(name="pharmacy_id"))
+	private List <Pharmacy> pharmacy;
 	
 	
 	

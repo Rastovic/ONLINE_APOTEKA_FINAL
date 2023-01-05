@@ -1,17 +1,22 @@
 package com.online.apoteka_final.entity;
 
 
-import java.util.Set;
+import java.util.List;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
 import lombok.Data;
 
 @Entity
@@ -38,7 +43,19 @@ public class Pharmacy {
 	@Column(name="user_password")
 	private String user_password;
 	
+	@ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.DETACH,CascadeType.REFRESH,CascadeType.MERGE})
+	@JoinTable(name="pharmacy_product",
+				joinColumns = @JoinColumn(name="pharmacy_id"),
+				inverseJoinColumns = @JoinColumn(name="product_id"))
+	private List<Product> product;
 	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="address_id", nullable=false)
+	private Address address;
+
+	@OneToOne
+	@JoinColumn(name="roles_id", nullable=false)
+	private Role roles;
 	
 	
 	

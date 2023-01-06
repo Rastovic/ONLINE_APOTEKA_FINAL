@@ -27,18 +27,21 @@ public class Pharmacy {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="pharmacy_id")
-	private int pharmacy_id;
+	private int id;
 	
 	
 	
 	@Column(name="pharmacy_name")
-	private String pharmacy_name;
+	private String pharmacyname;
 	
 	@Column(name="working_hours")
 	private String working_hours;
 	
 	@Column(name="user_name")
 	private String user_name;
+
+	@Column(name="image_url")
+	private String image_url;
 	
 	@Column(name="user_password")
 	private String user_password;
@@ -53,9 +56,6 @@ public class Pharmacy {
 	@JoinColumn(name="address_id", nullable=false)
 	private Address address;
 
-	@OneToOne
-	@JoinColumn(name="roles_id", nullable=false)
-	private Role roles;
 	
 	
 	

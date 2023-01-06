@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import {Component} from "@angular/core";
+
+interface SideNavToggle {
+  screenWidth: number;
+  collapsed: boolean;
+}
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'apoteka_final_front';
+  title = 'sidenav';
+
+  isSideNavCollapsed = false;
+  screenWidth = 0;
+
+  onToggleSideNav(data: SideNavToggle): void {
+    this.screenWidth = data.screenWidth;
+    this.isSideNavCollapsed = data.collapsed;
+  }
 }

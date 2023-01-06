@@ -10,19 +10,16 @@
                   <table class="table table-borderless text-white mb-0">
                     <thead>
                     <tr>
-                      <th scope="col">IMAGE</th>
-                      <th scope="col">PRODUCT</th>
-                      <th scope="col">PRICE</th>
+                      <th scope="col">CITY</th>
+                      <th scope="col">PHARMACY</th>
+                      <th scope="col">ZIP CODE</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr *ngFor="let tempProduct of products">
-                      <td class="align-middle">
-                        <img src="{{ tempProduct.image_url }}" height="75" />
-                      </td>
-                      <td class="align-middle">{{ tempProduct.product_name}}</td>
-                      <td class="align-middle">{{ tempProduct.price | currency:'EUR'}}</td>
-
+                    <tr *ngFor="let tempAddress of addresses">
+                      <td class="align-middle">{{ tempAddress.town}}</td>
+                      <td class="align-middle">{{ tempAddress.country}}</td>
+                      <td class="align-middle">{{ tempAddress.zip_code}}</td>
                     </tr>
 
                     </tbody>

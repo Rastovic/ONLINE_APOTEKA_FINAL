@@ -11,7 +11,7 @@ export const navbarData = [
   },
 
   {
-    routeLink: 'city',
+    routeLink: 'addresses',
     icon: 'fal fa-city',
     label: 'City',
   },

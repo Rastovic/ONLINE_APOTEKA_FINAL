@@ -10,8 +10,8 @@
 body {
   position: relative;
   font-family: 'Roboto', sans-serif;
-  --main-color: #B2DDF4;
-  --secondary-color: #fff;
+  --main-color: #284b9c;
+  --secondary-color: #031B4E;
   --dark-color: #37404A;
   --darker-color: #343A40;
   width: 100%;
@@ -73,14 +73,14 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
     box-shadow:-2px 0 4px #0000003b
 }
 
-/* 
+/*
  * ----------------------------
  * Header Desktop Section
  * ----------------------------
  */
 
 
-/* 
+/*
  * ----------------------------
  * Products List
  * ----------------------------
@@ -122,7 +122,7 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
     color:#585858
 }
 
-/* 
+/*
  * ----------------------------
  * Shopping Cart Checkout
  * ----------------------------
@@ -236,7 +236,7 @@ select{
     color:#828482
 }
 
-/* 
+/*
  * ----------------------------
  * Shopping Cart Details
  * ----------------------------

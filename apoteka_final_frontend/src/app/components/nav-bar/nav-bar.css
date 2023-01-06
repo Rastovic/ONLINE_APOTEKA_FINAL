@@ -16,7 +16,7 @@
   width: 100%;
 }
 .sidenav .logo-container .logo {
-  background: #fff;
+  background: #031B4E;
   text-align: center;
   width: 3rem;
   min-width: 3rem;
@@ -31,7 +31,7 @@
   margin-left: 1.5rem;
   font-size: 24px;
   font-weight: 700;
-  color: #16664E;
+  color: #ffffff;
 }
 .sidenav .logo-container .btn-close {
   margin-left: auto;
@@ -66,7 +66,7 @@
   display: flex;
   align-items: center;
   height: 3rem;
-  color: #16664E;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 0.625rem;
   transition: all 0.3s ease;

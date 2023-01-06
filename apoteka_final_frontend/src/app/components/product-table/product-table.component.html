@@ -1,23 +1,38 @@
-<table class="table">
+<section class="intro">
+  <div class="bg-image h-100">
+    <div class="mask d-flex align-items-top h-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="card mask-custom">
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-borderless text-white mb-0">
+                    <thead>
+                    <tr>
+                      <th scope="col">IMAGE</th>
+                      <th scope="col">PRODUCT</th>
+                      <th scope="col">PRICE</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let tempProduct of products">
+                      <td class="align-middle">
+                        <img src="{{ tempProduct.image_url }}" height="50" />
+                      </td>
+                      <td class="align-middle">{{ tempProduct.product_name}}</td>
+                      <td class="align-middle">{{ tempProduct.price | currency:'EUR'}}</td>
 
-    <thead class="table-dark">
-        <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Price</th>
+                    </tr>
 
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr *ngFor="let tempProduct of products">
-            <td class="align-middle">
-                <img src="{{ tempProduct.image_url }}" height="50" />
-            </td>
-            <td class="align-middle">{{ tempProduct.product_name}}</td>
-            <td class="align-middle">{{ tempProduct.price | currency:'USD'}}</td>
-
-        </tr>
-
-    </tbody>
-</table>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

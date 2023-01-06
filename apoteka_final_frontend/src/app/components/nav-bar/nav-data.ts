@@ -5,7 +5,7 @@ export const navbarData = [
     label: 'Products',
   },
   {
-    routeLink: 'pharmacy',
+    routeLink: 'pharmacies',
     icon: 'fal fa-hospital',
     label: 'Pharmacy',
   },

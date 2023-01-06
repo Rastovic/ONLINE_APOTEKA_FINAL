@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Pharmacy } from 'src/app/common/pharmacy';
+import { Pharmacy } from 'src/app/common/pharmacy/pharmacy';
 import { PharmacyService } from 'src/app/services/pharmacy.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class PharmacyGridComponent implements OnInit {
   pharmacies: Pharmacy[]=[];
   currentPharmacyId: number =1;
 
-  
+
   constructor(private pharmacyService: PharmacyService,
     private route: ActivatedRoute){}
   ngOnInit(): void {

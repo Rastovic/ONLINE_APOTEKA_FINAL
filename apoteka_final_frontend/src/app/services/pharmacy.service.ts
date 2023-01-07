@@ -25,12 +25,12 @@ export class PharmacyService {
 
   getPharmacyList(): Observable<Pharmacy[]>{
     return this.httpClient.get<GetResponse>(this.baseUrl).pipe(
-      map(response => response._embedded.pharmacy)
+      map(response => response._embedded.pharmacies)
     )
   }
 }
 interface GetResponse{
   _embedded: {
-    pharmacy : Pharmacy[];
+    pharmacies : Pharmacy[];
   }
 }

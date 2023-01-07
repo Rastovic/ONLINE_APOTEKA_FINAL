@@ -1,0 +1,57 @@
+html,
+body,
+.intro {
+  height: 15%;
+}
+
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.mask-custom {
+  background: transparent;
+  border-radius: 2em;
+  border: 0;
+  backdrop-filter: blur(25px);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
+.search-bar{
+  width: 200%;
+  max-width: 700px;
+  background: rgba(171, 171, 171, 0.2);
+  display: flex;
+  align-items: center;
+  border: 0;
+  border-radius: 2em;
+  padding: 10px 20px;
+}
+
+.search-bar input{
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: white;
+}
+
+::placeholder{
+  color: white;
+}
+.search-bar img{
+  width: 25px;
+}
+
+.search-bar button{
+  border: 0;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background: #585858;
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-package com.online.apoteka_final.Config;
+package com.online.apoteka_final.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

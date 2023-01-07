@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.online.apoteka_final.entity.Pharmacy;
 
-@RepositoryRestResource(collectionResourceRel = "pharmacy",path = "pharmacies")
+@RepositoryRestResource(collectionResourceRel = "pharmacies",path = "pharmacies")
 @CrossOrigin("http://localhost:4200")
 public interface PharmacyRepository extends JpaRepository<Pharmacy, Integer> {
 

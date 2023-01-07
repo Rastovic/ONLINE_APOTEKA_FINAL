@@ -14,6 +14,7 @@ import { PharmacyDetailsComponent } from './components/pharmacy-details/pharmacy
 import { PharmacyGridComponent } from './components/pharmacy-grid/pharmacy-grid.component';
 import { PharmacyService } from './services/pharmacy.service';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { SearchComponent } from './components/search/search.component';
 
 
 
@@ -26,7 +27,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     SidenavComponent,
     BodyComponent,
     PharmacyGridComponent,
-    PharmacyDetailsComponent
+    PharmacyDetailsComponent,
+    SearchComponent
   ],
 
   imports: [

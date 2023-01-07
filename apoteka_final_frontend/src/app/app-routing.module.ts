@@ -7,6 +7,7 @@ import {PharmacyDetailsComponent} from "./components/pharmacy-details/pharmacy-d
 
 
 const routes: Routes = [
+  {path: 'search/:keyword', component: ProductTableComponent},
   {path: 'products', component: ProductTableComponent},
   {path: 'addresses', component: AddressTableComponent},
   {path: 'pharmacies/:id', component: PharmacyDetailsComponent},

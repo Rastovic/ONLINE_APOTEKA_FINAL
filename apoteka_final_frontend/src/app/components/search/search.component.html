@@ -1,0 +1,14 @@
+
+  <div class="input-group">
+  <div class="form-outline">
+  <input #myInput type="text"
+         placeholder="Search for products ..."
+         class="form-control"
+         (keyup.enter)="doSearch(myInput.value)"  />
+        </div>
+  <button (click)="doSearch(myInput.value)" class="btn btn-primary">
+      Search
+  </button>
+
+  <div>
+

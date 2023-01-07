@@ -3,7 +3,7 @@ export class Product {
     constructor(
 
         public product_id: number,
-        public product_name: string,
+        public productName: string,
         public product_description: string,
         public price: number,
         public expiration_date: Date,

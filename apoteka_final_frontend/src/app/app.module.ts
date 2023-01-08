@@ -15,6 +15,7 @@ import { PharmacyGridComponent } from './components/pharmacy-grid/pharmacy-grid.
 import { PharmacyService } from './services/pharmacy.service';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { SearchComponent } from './components/search/search.component';
+import { ProductsByPharmacyComponent } from './components/products-by-pharmacy/products-by-pharmacy.component';
 
 
 
@@ -28,7 +29,8 @@ import { SearchComponent } from './components/search/search.component';
     BodyComponent,
     PharmacyGridComponent,
     PharmacyDetailsComponent,
-    SearchComponent
+    SearchComponent,
+    ProductsByPharmacyComponent
   ],
 
   imports: [

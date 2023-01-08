@@ -21,6 +21,13 @@ export class ProductService {
     );
   }
 
+
+  getProduct(theProductid: number):Observable<Product> {
+
+   const productUrl=`${this.baseUrl}/${theProductid}`;
+
+   return this.httpClient.get<Product>(productUrl);
+  }
  getProductListPharmacy(thePharmacyId: number):Observable<Product[]>{
   const searchUrl =`${this.baseUrl}/search/findByPharmacyId?id=${thePharmacyId}`;
    return this.httpClient.get<GetResponseProducts>(searchUrl).pipe(

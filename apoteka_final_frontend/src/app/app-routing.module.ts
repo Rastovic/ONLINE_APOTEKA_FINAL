@@ -4,6 +4,7 @@ import {ProductTableComponent} from "./components/product-table/product-table.co
 import {AddressTableComponent} from "./components/address/address-table.component";
 import {PharmacyGridComponent} from "./components/pharmacy-grid/pharmacy-grid.component";
 import {PharmacyDetailsComponent} from "./components/pharmacy-details/pharmacy-details.component";
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path: 'products', component: ProductTableComponent},
   {path: 'addresses', component: AddressTableComponent},
   {path: 'pharmacies/:id', component: PharmacyDetailsComponent},
+  {path: 'pharmacies/:id/products/:product_id', component: ProductDetailsComponent},
   {path: 'pharmacies', component: PharmacyGridComponent},
   {path: '**', redirectTo: 'pharmacies'},
 ];

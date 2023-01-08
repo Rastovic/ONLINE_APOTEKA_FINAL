@@ -6,9 +6,9 @@
 
                 <div *ngFor="let tempProduct of products" class="col-md-3">
                     <div class="product-box">
-
-                        <img src="{{ tempProduct.image_url}}" class="image_apoteka">
-
+                        <a routerLink="/pharmacies/{{currentPharmacyId}}/products/{{tempProduct.product_id}}">
+                            <img src="{{ tempProduct.image_url}}" class="image_apoteka">
+                        </a>
 
 
 

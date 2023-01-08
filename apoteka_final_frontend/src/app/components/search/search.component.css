@@ -20,17 +20,15 @@ table th {
   box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
 }
 .search-bar{
-  width: 200%;
+  width: 150%;
   max-width: 700px;
   background: rgba(171, 171, 171, 0.2);
-  display: flex;
-  align-items: center;
   border: 0;
   border-radius: 2em;
   padding: 10px 20px;
   color: white;
   letter-spacing: 1.5px;
-  
+
 }
 
 .search-bar input{
@@ -41,22 +39,28 @@ table th {
   padding: 24px 20px;
   font-size: 20px;
   color: white;
-  
+
 }
 
 ::placeholder{
   color: white;
-  
+
 }
 .search-bar img{
   width: 25px;
 }
 
-.search-bar button{
+button{
+  width: 0px;
   border: 0;
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
-  background: #585858;
+  width: 50px;
+  height: 50px;
+  background: transparent;
   cursor: pointer;
 }
+.form-outline{
+  display: flex;
+  width: 39%;
+}
+

@@ -1,35 +1,14 @@
-<section class="intro">
-  <div class="bg-image h-100">
-    <div class="mask d-flex align-items-top h-100">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12">
-            <div class="card mask-custom">
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table table-borderless text-white mb-0">
-                    <thead>
-                    <tr>
-                      <th scope="col">CITY</th>
-                      <th scope="col">PHARMACY</th>
-                      <th scope="col">ZIP CODE</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr *ngFor="let tempAddress of addresses">
-                      <td class="align-middle">{{ tempAddress.town}}</td>
-                      <td class="align-middle">{{ tempAddress.country}}</td>
-                      <td class="align-middle">{{ tempAddress.zip_code}}</td>
-                    </tr>
-
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<div class="a-box" style="padding: 13px" *ngFor="let tempAddress of addresses"  routerLink="/pharmacies/town/{{ tempAddress.town }}">
+  <div class="img-container">
+    <div class="img-inner">
+      <div class="inner-skew">
+        <img
+          src="assets/images/minialbumi.jpg">
       </div>
     </div>
   </div>
-</section>
+  <div class="text-container">
+    <h3>{{tempAddress.town}}</h3>
+  </div>
+</div>
+

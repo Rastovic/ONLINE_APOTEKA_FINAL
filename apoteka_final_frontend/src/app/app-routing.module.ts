@@ -5,6 +5,7 @@ import {AddressTableComponent} from "./components/address/address-table.componen
 import {PharmacyGridComponent} from "./components/pharmacy-grid/pharmacy-grid.component";
 import {PharmacyDetailsComponent} from "./components/pharmacy-details/pharmacy-details.component";
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import {PharmacyByTownComponent} from "./components/pharmacy-by-town/pharmacy-by-town.component";
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'addresses', component: AddressTableComponent},
   {path: 'pharmacies/:id', component: PharmacyDetailsComponent},
   {path: 'pharmacies/:id/products/:product_id', component: ProductDetailsComponent},
+  {path: 'pharmacies/town/:town', component: PharmacyByTownComponent},
   {path: 'pharmacies', component: PharmacyGridComponent},
   {path: '**', redirectTo: 'pharmacies'},
 ];

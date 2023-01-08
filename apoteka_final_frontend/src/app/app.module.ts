@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { SearchComponent } from './components/search/search.component';
 import { ProductsByPharmacyComponent } from './components/products-by-pharmacy/products-by-pharmacy.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import {PharmacyByTownComponent} from "./components/pharmacy-by-town/pharmacy-by-town.component";
 
 
 
@@ -32,7 +33,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     PharmacyDetailsComponent,
     SearchComponent,
     ProductsByPharmacyComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    PharmacyByTownComponent
   ],
 
   imports: [

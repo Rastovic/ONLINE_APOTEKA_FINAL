@@ -28,6 +28,12 @@ export class PharmacyService {
       map(response => response._embedded.pharmacies)
     )
   }
+
+  getPharmaciesByTown(town: string): Observable<Pharmacy[]>{
+    return this.httpClient.get<GetResponse>(`${this.baseUrl}/search/findAllByAddress_Town?town=${town}`).pipe(
+      map(response => response._embedded.pharmacies)
+    )
+  }
 }
 interface GetResponse{
   _embedded: {

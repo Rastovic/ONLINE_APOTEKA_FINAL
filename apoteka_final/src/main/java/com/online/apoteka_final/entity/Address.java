@@ -16,26 +16,24 @@ import lombok.Data;
 @Table(name="address")
 @Data
 public class Address {
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="address_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "address_id")
 	private int address_id;
-	
-	@Column(name="town")
+
+	@Column(name = "town")
 	private String town;
-	
-	@Column(name="country")
+
+	@Column(name = "country")
 	private String country;
-	
-	@Column(name="zip_code")
+
+	@Column(name = "zip_code")
 	private Long zip_code;
-	
-	@Column(name="street_name")
+
+	@Column(name = "street_name")
 	private String street_name;
-	
-	@Column(name="street_number")
+
+	@Column(name = "street_number")
 	private String street_number;
-	
-	
 }

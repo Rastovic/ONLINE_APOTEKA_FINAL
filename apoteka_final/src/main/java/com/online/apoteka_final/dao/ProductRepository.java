@@ -13,6 +13,6 @@ import com.online.apoteka_final.entity.Product;
 public interface ProductRepository extends JpaRepository<Product, Integer> {
 
     Page<Product> findByProductNameContaining(@Param("productName") String productName, Pageable pageable);
-
+    Page<Product> findByPharmacyId(@Param("id") Long id, Pageable pageable );
 
 }

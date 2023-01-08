@@ -1,13 +1,16 @@
 <div class="detail-section">
     <div class="container-fluid">
 
-        <img style="height: 100px;
-        width: 100px; margin-top: 100px;" src="{{ pharmacy.image_url }}" class="detail-img">
-
-        <h3>{{ pharmacy.pharmacyname }}</h3>
-        <div class="price">{{ pharmacy.working_hours  }}h</div>
+      
+        <img src="{{ pharmacy.image_url }} " class="apoteka_image_details" >
+    
+        <h1>{{ pharmacy.pharmacyname }}</h1>
+        <div>
+            <h2>Radno vrijeme: {{ pharmacy.working_hours  }}h</h2>
+            <h3>Adresa: {{pharmacy.address_id}}</h3>
+        </div>
         
-
+        
        
 
         <a routerLink="/pharmacies" class="mt-5">Vrati se na listu apoteka</a>

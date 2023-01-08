@@ -171,3 +171,15 @@ input::placeholder {
     margin-right: auto;
     width: 50%;
 }
+/*APOTEKA DETAILS */
+.apoteka_image_details
+{
+  
+    border: 2px solid rgb(221, 221, 221,.2);
+    border-radius: 25px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 250px;
+  
+}

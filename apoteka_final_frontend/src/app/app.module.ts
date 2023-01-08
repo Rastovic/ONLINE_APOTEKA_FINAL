@@ -19,6 +19,9 @@ import { ProductsByPharmacyComponent } from './components/products-by-pharmacy/p
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import {PharmacyByTownComponent} from "./components/pharmacy-by-town/pharmacy-by-town.component";
 
+import { OrderStatusComponent } from './components/order-status/order-status.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
+
 
 
 
@@ -34,7 +37,10 @@ import {PharmacyByTownComponent} from "./components/pharmacy-by-town/pharmacy-by
     SearchComponent,
     ProductsByPharmacyComponent,
     ProductDetailsComponent,
-    PharmacyByTownComponent
+    PharmacyByTownComponent,
+    OrderStatusComponent,
+    OrderDetailsComponent
+
   ],
 
   imports: [

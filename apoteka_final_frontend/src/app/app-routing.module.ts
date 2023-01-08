@@ -5,10 +5,15 @@ import {AddressTableComponent} from "./components/address/address-table.componen
 import {PharmacyGridComponent} from "./components/pharmacy-grid/pharmacy-grid.component";
 import {PharmacyDetailsComponent} from "./components/pharmacy-details/pharmacy-details.component";
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+
 import {PharmacyByTownComponent} from "./components/pharmacy-by-town/pharmacy-by-town.component";
+
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
+
 
 
 const routes: Routes = [
+  {path: 'order-details', component: OrderDetailsComponent},
   {path: 'search/:keyword', component: ProductTableComponent},
   {path: 'products', component: ProductTableComponent},
   {path: 'addresses', component: AddressTableComponent},

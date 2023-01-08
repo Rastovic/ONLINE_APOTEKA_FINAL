@@ -19,3 +19,32 @@ table th {
   background-clip: padding-box;
   box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
 }
+.cart-area.d-b{
+  display:block
+}
+.cart-area.d-n{
+  display:none
+}
+.cart-area i{
+  font-size:18px;
+  float:left;
+  margin-top:16px;
+  color:#03a9f4;
+  margin-left:15px
+}
+.primary-btn{
+  background:#0987a7;
+  padding:7px 20px;
+  text-align:center;
+  display:inline-block;
+  color:#fff;
+  border:0;
+  border-radius: 8px;
+  font-size:14px;
+  margin-top:5px
+}
+.primary-btn:hover{
+  background:#0da8e4;
+  color:#fff
+}
+

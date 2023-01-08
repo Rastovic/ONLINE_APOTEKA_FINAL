@@ -1,17 +1,25 @@
+<table><tr>
+
+
+  <td style="padding-left: 1200px;padding-top: 20px;"><app-cart-status></app-cart-status></td>
+
+</tr>
+</table>
+
 <div class="detail-section">
     <div class="container-fluid">
 
-      
+
         <img src="{{ pharmacy.image_url }} " class="apoteka_image_details" >
-    
+
         <h1>{{ pharmacy.pharmacyname }}</h1>
         <div>
             <h2>Radno vrijeme: {{ pharmacy.working_hours  }}h</h2>
             <app-products-by-pharmacy></app-products-by-pharmacy>
         </div>
-        
-        
-       
+
+
+
 
         <a routerLink="/pharmacies" class="mt-5">Vrati se na listu apoteka</a>
     </div>

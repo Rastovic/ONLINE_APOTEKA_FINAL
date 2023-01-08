@@ -1,12 +1,35 @@
 
-<div class="pomeraj1">
- 
-  <input #myInput type="text" placeholder="Search for products ..." class="search__input"
-  (keyup.enter)="doSearch(myInput.value)" />
-</div> 
+<section class="intro">
+      <div class="container">
+        <div class="row justify-content-center">
+            <div class="card mask-custom">
+              <div class="card-body">
+  <div class="input-group">
+  <div class="form-outline">
+  <input #myInput type="text"
+         placeholder="Search for products"
+         class="search-bar"
+         (keyup.enter)="doSearch(myInput.value)"  />
+        </div>
+  <!--
 
+  <button style="width: 0px;
+  border: 0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  cursor: pointer;" (click)="doSearch(myInput.value)">
+    <img style="width: 30px; align-items: center" src="assets/images/search.png">
+  </button>
 
-  
+  -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 

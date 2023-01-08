@@ -1,6 +1,12 @@
 <section class="intro">
   <div class="bg-image h-100">
-    <app-search></app-search>
+    <table><tr>
+      <td width="700px"><app-search></app-search></td>
+      <td style="padding-left: 500px;"><app-cart-status></app-cart-status></td>
+
+
+
+    </tr></table>
     <div  class="mask d-flex align-items-top h-100">
 <div class="pomeraj">
       <div class="container">
@@ -24,6 +30,7 @@
                       </td>
                       <td class="align-middle">{{ tempProduct.productName}}</td>
                       <td class="align-middle">{{ tempProduct.price | currency:'EUR'}}</td>
+                      <td  style="padding-top: 35px;"><button (click)="addToOrder(tempProduct)" class="primary-btn">Add to cart</button></td>
 
                     </tr>
 

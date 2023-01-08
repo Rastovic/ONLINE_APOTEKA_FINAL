@@ -1,3 +1,6 @@
+<table>
+<tr>
+  <td>
 <div class="detail-section">
     <div class="container-fluid">
 
@@ -9,10 +12,16 @@
             <h2>Cijena: {{ product.price| currency:'EUR' }}</h2>
 
         </div>
-
+        <button (click)="addToOrder()" class="primary-btn">Add to cart</button>
 
 
 
 
     </div>
 </div>
+</td>
+
+<td style="padding-left: 927px;padding-bottom: 290px;"><app-cart-status></app-cart-status></td>
+
+</tr>
+</table>

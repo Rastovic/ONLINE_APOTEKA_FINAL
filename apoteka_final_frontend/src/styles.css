@@ -65,7 +65,7 @@ body {
     padding:  40px;
     padding-left:70px;
     min-height:100vh;
-    
+
 }
 
 aside.menu-sidebar.d-none.d-lg-block.clr{
@@ -109,13 +109,13 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
     border-radius: 25px;
     box-shadow:6px 6px 4px #0b0a0a3b
 }
-    
-   
+
+
 
 
 .product-box h1{
     font-size:18px;
-    
+
     padding-bottom:5px;
     font-weight:600;
     padding-top:12px;
@@ -136,7 +136,7 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
  * ----------------------------
  */
 .search__input {
-    
+
     width: 60%;
     padding: 12px 24px;
     color: rgb(238, 242, 251,.5);
@@ -145,20 +145,20 @@ aside.menu-sidebar.d-none.d-lg-block.clr{
     font-size: 20px;
     line-height: 18px;
     color: rgb(254, 254, 250,.2);
-   
+
     background-repeat: no-repeat;
-   
+
     border-radius: 25px;
     border: 2px solid rgb(237, 237, 229,.5);
-    
+
 
     padding-left: 30px;
     color: color(#f8f8f0 a(0.8));
-            
-            letter-spacing: 1.5px;
-    
 
-    
+            letter-spacing: 1.5px;
+
+
+
 }
 input::placeholder {
     color: #c4c9cd;
@@ -174,12 +174,40 @@ input::placeholder {
 /*APOTEKA DETAILS */
 .apoteka_image_details
 {
-  
+
     border: 2px solid rgb(221, 221, 221,.2);
     border-radius: 25px;
     padding-top: 20px;
     padding-left: 20px;
     padding-right: 20px;
     width: 250px;
-  
+
+}
+
+.cart-area.d-b{
+  display:block
+}
+.cart-area.d-n{
+  display:none
+}
+.cart-area i{
+  font-size:18px;
+  float:left;
+  margin-top:16px;
+  color:#03a9f4;
+  margin-left:15px
+}
+.primary-btn{
+  background:#05143f;
+  padding:7px 20px;
+  text-align:center;
+  display:inline-block;
+  color:#fff;
+  border-radius:2px;
+  font-size:14px;
+  margin-top:5px
+}
+a.primary-btn:hover{
+  background:#0da8e4;
+  color:#fff
 }

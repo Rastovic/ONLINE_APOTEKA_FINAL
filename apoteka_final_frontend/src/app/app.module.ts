@@ -18,6 +18,9 @@ import { SearchComponent } from './components/search/search.component';
 import { ProductsByPharmacyComponent } from './components/products-by-pharmacy/products-by-pharmacy.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
+import { OrderStatusComponent } from './components/order-status/order-status.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
+
 
 
 
@@ -32,7 +35,9 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     PharmacyDetailsComponent,
     SearchComponent,
     ProductsByPharmacyComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    OrderStatusComponent,
+    OrderDetailsComponent
   ],
 
   imports: [

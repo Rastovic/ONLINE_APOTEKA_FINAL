@@ -10,7 +10,8 @@ export class Product {
         public availability: boolean,
         public prescription: boolean,
         public supplier_id: number,
-        public image_url: string
+        public image_url: string,
+
 
     ){}
 }

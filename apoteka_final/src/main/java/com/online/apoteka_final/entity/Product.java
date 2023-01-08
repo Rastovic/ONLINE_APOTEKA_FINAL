@@ -36,6 +36,8 @@ public class Product {
 	
 	@Column(name="prescription")
 	private boolean prescription;
+
+	
 	
 	@OneToOne
 	@JoinColumn(name = "supplier_id", nullable = false)

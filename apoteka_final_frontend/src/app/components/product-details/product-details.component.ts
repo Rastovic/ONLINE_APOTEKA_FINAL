@@ -20,7 +20,7 @@ export class ProductDetailsComponent implements OnInit {
      })
   }
   handleProductDetails() {
-    const theProductid:number= + this.route.snapshot.paramMap.get('id')!;
+    const theProductid:number= + this.route.snapshot.paramMap.get('product_id')!;
     this.productService.getProduct(theProductid).subscribe(
      data=> {
        this.product=data;

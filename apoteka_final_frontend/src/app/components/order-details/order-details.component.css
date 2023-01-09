@@ -3,12 +3,48 @@
 }
 .main-content{
   padding-top:116px;
-  min-height:100vh
+  min-height:100vh;
+
+}
+
+.table{
+
+
+ margin: 100px auto;
+ text-align:center;position:relative;
+ color:#fff;
+ width: 1200px;
+ border-collapse: collapse;
+ background-color: rgb(27, 55, 104);
+ border-radius: 2em;
+border:0}
+
+tr {
+text-align: bottom;
+}
+
+.primary-btn{
+  background:#0987a7;
+  padding:7px 20px;
+  text-align:center;
+  display:inline-block;
+  color:#fff;
+  border:0;
+  border-radius: 8px;
+  font-size:14px;
+  margin-top:5px
+
+}
+.primary-btn:hover{
+  background:#0da8e4;
+  color:#fff
 }
 
 
-.order{
-  color: white;
 
 
-}
+
+
+
+
+

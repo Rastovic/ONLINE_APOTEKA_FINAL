@@ -21,7 +21,7 @@ currentPharmacyId: number=1;
     this.route.paramMap.subscribe(() =>{
       this.listProducts();
     });
-    
+
   }
 
 listProducts(){

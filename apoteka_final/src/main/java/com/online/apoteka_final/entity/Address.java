@@ -36,4 +36,7 @@ public class Address {
 
 	@Column(name = "street_number")
 	private String street_number;
+
+	@Column(name="image_url")
+	private String image_url;
 }

@@ -39,14 +39,14 @@ export class ProductService {
 
     // need to build URL based on the keyword
     const searchUrl = `${this.baseUrl}/search/findByProductNameContaining?productName=${theKeyword}`;
-    this.getProductList()
+
     return this.getProducts(searchUrl);
 
   }
 
 
   private getProducts(searchUrl: string): Observable<Product[]> {
-    this.getProductList()
+
     return this.httpClient.get<GetResponseProducts>(searchUrl).pipe(map(response => response._embedded.products));
   }
 

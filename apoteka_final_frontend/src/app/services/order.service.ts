@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import Swal from 'sweetalert2';
 import { OrderItem } from '../common/order-item/order-item';
+import { Product } from '../common/product/product';
 
 @Injectable({
   providedIn: 'root'
@@ -38,6 +40,8 @@ export class OrderService {
     }
 
     this.computeOrderTotal();
+    this.alertSuccess();
+
 
 
   }
@@ -57,6 +61,7 @@ export class OrderService {
 
     this.logOrderData(totalPriceValue, totalQuantityValue);
     this.persistCartItems();
+
 
 
   }
@@ -98,6 +103,10 @@ export class OrderService {
       }
   }
 
+  alertSuccess(){
+    for (let tempOrderItem of this.orderItem) {
+    Swal.fire("Thank You",` ${tempOrderItem.product_name} has been added to your order`,"success");}
+  }
 }
 
 

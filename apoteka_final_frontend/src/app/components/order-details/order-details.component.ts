@@ -39,7 +39,7 @@ export class OrderDetailsComponent implements OnInit{
   }
 
   incrementQuantity(theOrderItem:OrderItem){
-    this.orderService.addToOrder(theOrderItem);
+    this.orderService.addToOrder2(theOrderItem);
 
   }
   decrementQuantity(theOrderItem:OrderItem){

@@ -45,6 +45,26 @@ export class OrderService {
 
 
   }
+  addToOrder2(theOrderItem:OrderItem){
+    let alreadyExistsInOrder: boolean = false;
+    let existingOrderItem : OrderItem = undefined;
+
+    if(this.orderItem.length>0){
+      existingOrderItem = this.orderItem.find(tempOrderItem => tempOrderItem.product_id === theOrderItem.product_id);
+
+
+     alreadyExistsInOrder = (existingOrderItem != undefined);
+
+    }
+    if(alreadyExistsInOrder){
+        existingOrderItem.quantity++;
+    }
+    else{
+      this.orderItem.push(theOrderItem);
+    }
+
+    this.computeOrderTotal();
+  }
 
   computeOrderTotal() {
     let totalPriceValue: number = 0;

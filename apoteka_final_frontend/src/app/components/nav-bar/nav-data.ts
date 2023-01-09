@@ -16,7 +16,7 @@ export const navbarData = [
     label: 'City',
   },
   {
-    routeLink: 'orders',
+    routeLink: 'order-details',
     icon: 'fal fa-cash-register',
     label: 'Orders',
   },

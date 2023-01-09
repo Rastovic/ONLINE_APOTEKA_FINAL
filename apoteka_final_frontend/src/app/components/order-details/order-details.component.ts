@@ -38,4 +38,16 @@ export class OrderDetailsComponent implements OnInit{
     this.orderService.computeOrderTotal();
   }
 
+  incrementQuantity(theOrderItem:OrderItem){
+    this.orderService.addToOrder(theOrderItem);
+
+  }
+  decrementQuantity(theOrderItem:OrderItem){
+      this.orderService.decrementQuantity(theOrderItem);
+
+  }
+  remove(theOrderItem:OrderItem){
+    this.orderService.remove(theOrderItem);
+  }
+
 }

@@ -9,6 +9,7 @@ export class OrderService {
 
 
 
+
   orderItem: OrderItem[];
 
   totalPrice: Subject<number> = new Subject<number>();
@@ -74,6 +75,27 @@ export class OrderService {
 
   persistCartItems(){
     sessionStorage.setItem('orderItem', JSON.stringify(this.orderItem));
+  }
+
+  decrementQuantity(theOrderItem: OrderItem) {
+    theOrderItem.quantity--;
+
+    if(theOrderItem.quantity===0){
+      this.remove(theOrderItem);
+    }
+    else{
+      this.computeOrderTotal();
+    }
+
+
+  }
+  remove(theOrderItem: OrderItem) {
+      const itemIndex = this.orderItem.findIndex(tempOrderItem=>tempOrderItem.product_id === theOrderItem.product_id);
+
+      if(itemIndex > -1){
+        this.orderItem.splice(itemIndex,1);
+        this.computeOrderTotal()
+      }
   }
 
 }

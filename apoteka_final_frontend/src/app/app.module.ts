@@ -21,6 +21,11 @@ import {PharmacyByTownComponent} from "./components/pharmacy-by-town/pharmacy-by
 
 import { OrderStatusComponent } from './components/order-status/order-status.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
+
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ReactiveFormsModule } from '@angular/forms';
+=======
+
 import { PharmacyByProductComponent } from './components/pharmacy-by-product/pharmacy-by-product.component';
 import { AddressPharmacyComponent } from './components/address-pharmacy/address-pharmacy.component';
 
@@ -42,8 +47,12 @@ import { AddressPharmacyComponent } from './components/address-pharmacy/address-
     PharmacyByTownComponent,
     OrderStatusComponent,
     OrderDetailsComponent,
+
+    CheckoutComponent
+=======
     PharmacyByProductComponent,
     AddressPharmacyComponent
+
 
   ],
 
@@ -54,7 +63,8 @@ import { AddressPharmacyComponent } from './components/address-pharmacy/address-
     RouterLinkActive,
     RouterOutlet,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
 ],
   providers: [PharmacyService,ProductService, AddressService],
   bootstrap: [AppComponent]

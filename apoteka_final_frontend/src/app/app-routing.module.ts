@@ -10,6 +10,8 @@ import {PharmacyByTownComponent} from "./components/pharmacy-by-town/pharmacy-by
 
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { PharmacyByProductComponent } from './components/pharmacy-by-product/pharmacy-by-product.component';
+import { AddressPharmacyComponent } from './components/address-pharmacy/address-pharmacy.component';
 
 
 

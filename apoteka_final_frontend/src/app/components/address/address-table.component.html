@@ -1,24 +1,27 @@
-
-
-
 <table>
-  <tr><td width="1300px" align="right"><app-cart-status></app-cart-status></td></tr>
-<tr>
+  <tr>
+    <td width="1300px" align="right">
+      <app-cart-status></app-cart-status>
+    </td>
+  </tr>
+  <tr>
 
-  <td><div class="a-box" style="padding: 13px" *ngFor="let tempAddress of addresses"  routerLink="/pharmacies/town/{{ tempAddress.town }}">
-  <div class="img-container">
-    <div class="img-inner">
-      <div class="inner-skew">
-        <img
-          src="assets/images/minialbumi.jpg">
+    <td>
+      <div class="a-box" style="padding: 13px" *ngFor="let tempAddress of addresses"
+           routerLink="/pharmacies/town/{{ tempAddress.town }}">
+        <div class="img-container">
+          <div class="img-inner">
+            <div class="inner-skew">
+              <img
+                src="assets/images/cities/{{tempAddress.town}}.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="text-container">
+          <h3>{{tempAddress.town}}</h3>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="text-container">
-    <h3>{{tempAddress.town}}</h3>
-  </div>
-</div>
-</td>
+    </td>
 
-</tr>
+  </tr>
 </table>

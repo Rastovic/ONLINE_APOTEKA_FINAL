@@ -8,13 +8,14 @@
 
                 <div *ngFor="let tempProduct of products" class="col-md-3">
                     <div class="product-box">
-                        <a routerLink="/pharmacies/{{currentPharmacyId}}/products/{{tempProduct.id}}">
+
                             <img src="{{ tempProduct.image_url}}" class="image_apoteka">
-                        </a>
+                        
 
 
-
+                      <a routerLink="/pharmacies/{{currentPharmacyId}}/products/{{tempProduct.id}}">
                         <h1 style="text-align: center;">{{tempProduct.productName}}</h1>
+                      </a>
 
 
                         <h2>{{ tempProduct.price | currency:'EUR'}}</h2>

@@ -13,12 +13,8 @@ public class Product {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-
 	@Column(name="product_id", nullable = false)
     private int id;
-=======
-	@Column(name="product_id")
-	private int id;
 
 	
 	@Column(name = "image_url")

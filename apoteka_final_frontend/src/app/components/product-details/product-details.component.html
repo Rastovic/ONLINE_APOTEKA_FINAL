@@ -1,27 +1,45 @@
+
+
+<div style="position:absolute;
+top:0;
+right:0;"><app-cart-status></app-cart-status></div>
+
 <table>
-<tr>
-  <td>
-<div class="detail-section">
-    <div class="container-fluid">
+    <tr>
+        
+        <td>
+            <div class="detail-section">
+                <div class="container-fluid">
 
 
-        <img src="{{ product.image_url }} " class="apoteka_image_details">
+                    <img src="{{ product.image_url }} " class="apoteka_image_details">
 
-        <h1>{{ product.productName }}</h1>
-        <div>
-            <h2>Cijena: {{ product.price| currency:'EUR' }}</h2>
+                    <h1 style="text-transform: uppercase;">{{ product.productName }}</h1>
+                    <div>
+                        <h3>Cijena: {{ product.price| currency:'EUR' }}</h3>
 
-        </div>
-        <button (click)="addToOrder()" class="primary-btn">Add to cart</button>
+                    </div>
+                    <div class="product_description">
+                        <p>Opis proizvoda: {{product.product_description}}
+                        <div class="prescription_true" *ngIf="product.prescription">
+                            <span>Potrebno je propisati od strane doktora!</span>
+
+                            <div class="prescription_false" *ngIf="!product.prescription">
+                                <span>Nije potrebno propisati od strane doktora.</span>
+                            </div>
 
 
 
 
-    </div>
-</div>
-</td>
 
-<td style="padding-left: 927px;padding-bottom: 290px;"><app-cart-status></app-cart-status></td>
-
-</tr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="padding-left:15px; padding-top:10px">
+                <button (click)="addToOrder()" class="primary-btn">Add to cart</button>
+            </div>
+        </td>
+        
+    </tr>
 </table>

@@ -18,7 +18,7 @@ export class OrderService {
   totalQuantity: Subject<number> = new Subject<number>();
 
   constructor() {
-    this.orderItem = JSON.parse(sessionStorage.getItem('cartItems')) != null ? JSON.parse(sessionStorage.getItem('cartItems')):[];
+    this.orderItem = JSON.parse(sessionStorage.getItem('orderItem')) != null ? JSON.parse(sessionStorage.getItem('orderItem')):[];
   }
 
   addToOrder(theOrderItem:OrderItem){

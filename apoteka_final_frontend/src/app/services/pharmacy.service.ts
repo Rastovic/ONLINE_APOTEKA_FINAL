@@ -8,7 +8,17 @@ import {map} from 'rxjs/operators'
   providedIn: 'root'
 })
 export class PharmacyService {
+
   private baseUrl='http://localhost:8080/api/pharmacies'
+  constructor(private httpClient: HttpClient) { }
+  
+  getPharmaciesListProdcut(theProductId: number):Observable<Pharmacy[]> {
+    const searchUrl =`${this.baseUrl}/search/findByProductId?id=${theProductId}`;
+    return this.httpClient.get<GetResponse>(searchUrl).pipe(
+      map(response => response._embedded.pharmacies)
+  );
+  }
+
 
 
   getPharmacy(thePharmacyid: number):Observable<Pharmacy> {
@@ -21,7 +31,7 @@ export class PharmacyService {
 
 
 
-  constructor(private httpClient: HttpClient) { }
+ 
 
   getPharmacyList(): Observable<Pharmacy[]>{
     return this.httpClient.get<GetResponse>(this.baseUrl).pipe(

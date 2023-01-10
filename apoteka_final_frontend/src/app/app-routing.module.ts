@@ -9,7 +9,10 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import {PharmacyByTownComponent} from "./components/pharmacy-by-town/pharmacy-by-town.component";
 
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
+
 import { CheckoutComponent } from './components/checkout/checkout.component';
+=======
+
 import { PharmacyByProductComponent } from './components/pharmacy-by-product/pharmacy-by-product.component';
 import { AddressPharmacyComponent } from './components/address-pharmacy/address-pharmacy.component';
 
@@ -20,9 +23,10 @@ const routes: Routes = [
   {path: 'order-details', component: OrderDetailsComponent},
   {path: 'search/:keyword', component: ProductTableComponent},
   {path: 'products', component: ProductTableComponent},
+  {path: 'products/:id', component: PharmacyByProductComponent},  
   {path: 'addresses', component: AddressTableComponent},
   {path: 'pharmacies/:id', component: PharmacyDetailsComponent},
-  {path: 'pharmacies/:id/products/:product_id', component: ProductDetailsComponent},
+  {path: 'pharmacies/:id/products/:id', component: ProductDetailsComponent},
   {path: 'pharmacies/town/:town', component: PharmacyByTownComponent},
   {path: 'pharmacies', component: PharmacyGridComponent},
   {path: '**', redirectTo: 'pharmacies'},

@@ -22,20 +22,25 @@
                           <th scope="col">IMAGE</th>
                           <th scope="col">PRODUCT</th>
                           <th scope="col">PRICE</th>
+                          <th scope="col">Potreban recept</th>
+                        
                         </tr>
                       </thead>
                       <tbody>
                         <tr *ngFor="let tempProduct of products">
                           <td class="align-middle">
+                            <a routerLink="/products/{{ tempProduct.id }}">
                             <img src="{{ tempProduct.image_url }}" height="100" />
+                          </a>
                           </td>
                           <td class="align-middle">{{ tempProduct.productName}}</td>
                           <td class="align-middle">{{ tempProduct.price | currency:'EUR'}}</td>
+                          <td class="align-middle">DA!</td>
                           <td style="padding-top: 35px;"><button (click)="addToOrder(tempProduct)"
                               class="primary-btn">Add to cart</button></td>
-
+                           
                         </tr>
-
+<!-- <a routerLink="/products/{{ tempProduct.id }}">IN</a> -->
                       </tbody>
                     </table>
 

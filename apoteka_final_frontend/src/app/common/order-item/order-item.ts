@@ -11,7 +11,7 @@ export class OrderItem {
 
 
     constructor(product : Product){
-        this.product_id = product.product_id;
+        this.product_id = product.id;
         this.product_name = product.productName;
         this.product_description = product.product_description;
         this.price = product.price;

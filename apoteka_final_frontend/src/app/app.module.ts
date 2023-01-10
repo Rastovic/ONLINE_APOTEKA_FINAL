@@ -21,6 +21,8 @@ import {PharmacyByTownComponent} from "./components/pharmacy-by-town/pharmacy-by
 
 import { OrderStatusComponent } from './components/order-status/order-status.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -39,7 +41,8 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
     ProductDetailsComponent,
     PharmacyByTownComponent,
     OrderStatusComponent,
-    OrderDetailsComponent
+    OrderDetailsComponent,
+    CheckoutComponent
 
   ],
 
@@ -50,7 +53,8 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
     RouterLinkActive,
     RouterOutlet,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
 ],
   providers: [PharmacyService,ProductService, AddressService],
   bootstrap: [AppComponent]

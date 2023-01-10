@@ -18,6 +18,7 @@ export class PharmacyGridComponent implements OnInit {
     private route: ActivatedRoute){}
   ngOnInit(): void {
     this.listPharmacies();
+
   }
   listPharmacies(){
     this.pharmacyService.getPharmacyList().subscribe(

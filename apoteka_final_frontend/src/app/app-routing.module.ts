@@ -9,10 +9,12 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import {PharmacyByTownComponent} from "./components/pharmacy-by-town/pharmacy-by-town.component";
 
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 
 
 const routes: Routes = [
+  {path: 'checkout', component: CheckoutComponent},
   {path: 'order-details', component: OrderDetailsComponent},
   {path: 'search/:keyword', component: ProductTableComponent},
   {path: 'products', component: ProductTableComponent},

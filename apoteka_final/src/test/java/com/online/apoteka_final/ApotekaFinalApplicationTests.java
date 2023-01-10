@@ -15,11 +15,11 @@ class ApotekaFinalApplicationTests {
 	void contextLoads() {
 	}
 
-/*	@Test
+	@Test
 	void emailTest()
 	{
-		EmailDetails emailDetails = new EmailDetails("ninabulajic08@gmail.com","Cao","Bravo");
+		EmailDetails emailDetails = new EmailDetails("jelenarastovic7@gmail.com","Cao","Bravo");
 		mailService.sendSimpleMail(emailDetails);
-	}*/
+	}
 
 }

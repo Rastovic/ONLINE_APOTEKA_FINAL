@@ -5,13 +5,12 @@ top:0;
 right:0;"><app-cart-status></app-cart-status></div>
 
 <table>
- 
+
 <tr>
 
-
-    <td>
+    <td class="main-content">
       <div class="a-box" style="padding: 13px" *ngFor="let tempAddress of addresses"
-           routerLink="/pharmacies/town/{{ tempAddress.town }}">
+          >
         <div class="img-container">
           <div class="img-inner">
             <div class="inner-skew">
@@ -21,7 +20,8 @@ right:0;"><app-cart-status></app-cart-status></div>
           </div>
         </div>
         <div class="text-container">
-          <h3>{{tempAddress.town}}</h3>
+          <a routerLink="/pharmacies/town/{{ tempAddress.town }}">
+          <h3>{{tempAddress.town}}</h3></a>
         </div>
       </div>
     </td>

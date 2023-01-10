@@ -14,7 +14,7 @@ public class MailService{
     {
             SimpleMailMessage mailMessage = new SimpleMailMessage();
 
-            mailMessage.setFrom("montenegrobuy@gmail.com");
+            mailMessage.setFrom("apoteka.online.cg@gmail.com");
             mailMessage.setTo(details.getRecipient());
             mailMessage.setText(details.getMsgBody());
             mailMessage.setSubject(details.getSubject());

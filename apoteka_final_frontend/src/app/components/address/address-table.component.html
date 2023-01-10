@@ -1,8 +1,10 @@
 
-
+<div style="position:absolute;
+top:0;
+right:0;"><app-cart-status></app-cart-status></div>
 
 <table>
-  <tr><td width="1300px" align="right"><app-cart-status></app-cart-status></td></tr>
+ 
 <tr>
 
   <td><div class="a-box" style="padding: 13px" *ngFor="let tempAddress of addresses"  routerLink="/pharmacies/town/{{ tempAddress.town }}">

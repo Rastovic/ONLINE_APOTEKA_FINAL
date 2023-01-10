@@ -8,6 +8,11 @@ import {map} from 'rxjs/operators'
 })
 export class AddressService {
 
+  getAddressPharmacy(thePharmacyId: number) {
+    const searchUrl =`${this.baseUrl}/search/findByPharmacyId?id=${thePharmacyId}`;
+    return this.httpClient.get<Address>(searchUrl);
+  }
+
   private baseUrl='http://localhost:8080/api/address'
   constructor(private httpClient: HttpClient) { }
   getAddressList():Observable<Address[]>{
@@ -15,7 +20,13 @@ export class AddressService {
       map(response => response._embedded.address)
     );
   }
+  
+  getAddress(theAddressid: number):Observable<Address> {
 
+    const addressUrl=`${this.baseUrl}/${theAddressid}`;
+ 
+    return this.httpClient.get<Address>(addressUrl);
+   }
 }
 interface GetResponse{
   _embedded: {

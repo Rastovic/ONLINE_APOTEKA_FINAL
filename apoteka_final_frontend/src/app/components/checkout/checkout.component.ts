@@ -43,6 +43,20 @@ export class CheckoutComponent {
 
 
 }
+
+reviewCartDetails() {
+
+  // subscribe to cartService.totalQuantity
+  this.orderService.totalQuantity.subscribe(
+    totalQuantity => this.totalQuantity = totalQuantity
+  );
+
+  // subscribe to cartService.totalPrice
+  this.orderService.totalPrice.subscribe(
+    totalPrice => this.totalPrice = totalPrice
+  );
+
+}
 get firstName() { return this.checkoutFormGroup.get('customer.firstName'); }
 get lastName() { return this.checkoutFormGroup.get('customer.lastName'); }
 get email() { return this.checkoutFormGroup.get('customer.email'); }
@@ -95,19 +109,7 @@ onSubmit() {
     );
 }
 
-reviewCartDetails() {
 
-  // subscribe to cartService.totalQuantity
-  this.orderService.totalQuantity.subscribe(
-    totalQuantity => this.totalQuantity = totalQuantity
-  );
-
-  // subscribe to cartService.totalPrice
-  this.orderService.totalPrice.subscribe(
-    totalPrice => this.totalPrice = totalPrice
-  );
-
-}
 resetCart(){
 
   this.orderService.orderItem = [];

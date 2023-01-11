@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 import Swal from 'sweetalert2';
 import { OrderItem } from '../common/order-item/order-item';
 import { Product } from '../common/product/product';
@@ -14,8 +14,8 @@ export class OrderService {
 
   orderItem: OrderItem[];
 
-  totalPrice: Subject<number> = new Subject<number>();
-  totalQuantity: Subject<number> = new Subject<number>();
+  totalPrice: Subject<number> = new BehaviorSubject<number>(0);
+  totalQuantity: Subject<number> = new BehaviorSubject<number>(0);
 
   constructor() {
     this.orderItem = JSON.parse(sessionStorage.getItem('orderItem')) != null ? JSON.parse(sessionStorage.getItem('orderItem')):[];

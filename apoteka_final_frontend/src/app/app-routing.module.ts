@@ -11,7 +11,7 @@ import {PharmacyByTownComponent} from "./components/pharmacy-by-town/pharmacy-by
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
 
 import { CheckoutComponent } from './components/checkout/checkout.component';
-=======
+
 
 import { PharmacyByProductComponent } from './components/pharmacy-by-product/pharmacy-by-product.component';
 import { AddressPharmacyComponent } from './components/address-pharmacy/address-pharmacy.component';
@@ -23,7 +23,7 @@ const routes: Routes = [
   {path: 'order-details', component: OrderDetailsComponent},
   {path: 'search/:keyword', component: ProductTableComponent},
   {path: 'products', component: ProductTableComponent},
-  {path: 'products/:id', component: PharmacyByProductComponent},  
+  {path: 'products/:id', component: PharmacyByProductComponent},
   {path: 'addresses', component: AddressTableComponent},
   {path: 'pharmacies/:id', component: PharmacyDetailsComponent},
   {path: 'pharmacies/:id/products/:id', component: ProductDetailsComponent},

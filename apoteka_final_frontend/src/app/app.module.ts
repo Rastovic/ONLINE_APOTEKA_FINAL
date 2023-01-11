@@ -24,7 +24,6 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
 
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ReactiveFormsModule } from '@angular/forms';
-=======
 
 import { PharmacyByProductComponent } from './components/pharmacy-by-product/pharmacy-by-product.component';
 import { AddressPharmacyComponent } from './components/address-pharmacy/address-pharmacy.component';
@@ -48,10 +47,10 @@ import { AddressPharmacyComponent } from './components/address-pharmacy/address-
     OrderStatusComponent,
     OrderDetailsComponent,
 
-    CheckoutComponent
-=======
+    CheckoutComponent,
+
     PharmacyByProductComponent,
-    AddressPharmacyComponent
+    AddressPharmacyComponent,
 
 
   ],

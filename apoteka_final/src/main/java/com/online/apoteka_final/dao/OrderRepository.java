@@ -9,4 +9,6 @@ import com.online.apoteka_final.entity.Order;
 @CrossOrigin("http://localhost:4200")
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
+    Order findOrderByOrderTrackingNumber(String trackNum);
+
 }

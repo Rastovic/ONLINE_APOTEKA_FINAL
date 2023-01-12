@@ -1,25 +1,45 @@
 package com.online.apoteka_final.services;
+
 import com.online.apoteka_final.helpers.EmailDetails;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.MimeMailMessage;
 import org.springframework.stereotype.Component;
+import org.springframework.mail.javamail.MimeMessageHelper;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.MimeMessage;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @Component
-public class MailService{
+public class MailService {
     @Autowired
     private JavaMailSender javaMailSender;
-    public void sendSimpleMail(EmailDetails details)
+
+    public void sendSimpleMail(EmailDetails details) throws MessagingException, IOException
     {
-            SimpleMailMessage mailMessage = new SimpleMailMessage();
+        MimeMessage mimeMessage = javaMailSender.createMimeMessage();
+        MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, "utf-8");
+        helper.setText(readContent(), true);
+        helper.setFrom("apoteka.online.cg@gmail.com");
+        helper.setTo(details.getRecipient());
 
-            mailMessage.setFrom("apoteka.online.cg@gmail.com");
-            mailMessage.setTo(details.getRecipient());
-            mailMessage.setText(details.getMsgBody());
-            mailMessage.setSubject(details.getSubject());
+        helper.setSubject(details.getSubject());
 
-            javaMailSender.send(mailMessage);
+        javaMailSender.send(mimeMessage);
 
+    }
+
+    private String readContent() throws IOException {
+        var path = Paths.get("src/main/java/com/online/apoteka_final/services/mailBody.html");
+        return new String(Files.readAllBytes(path));
     }
 }

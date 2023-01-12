@@ -15,11 +15,5 @@ class ApotekaFinalApplicationTests {
 	void contextLoads() {
 	}
 
-	@Test
-	void emailTest()
-	{
-		EmailDetails emailDetails = new EmailDetails("jelenarastovic7@gmail.com","Cao","Bravo");
-		mailService.sendSimpleMail(emailDetails);
-	}
 
 }

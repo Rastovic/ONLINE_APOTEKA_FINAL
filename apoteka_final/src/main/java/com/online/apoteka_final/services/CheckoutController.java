@@ -1,4 +1,4 @@
-package com.online.apoteka_final.controller;
+package com.online.apoteka_final.services;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.online.apoteka_final.dto.Purchase;
 import com.online.apoteka_final.dto.PurchaseResponse;
-import com.online.apoteka_final.service.CheckoutService;
+
+import javax.mail.MessagingException;
+import java.io.IOException;
 
 @CrossOrigin("http://localhost:4200")
 @RestController
@@ -22,9 +24,8 @@ public class CheckoutController {
     }
     
     @PostMapping("/purchase")
-    public PurchaseResponse placeOrder(@RequestBody Purchase purchase) {
+    public PurchaseResponse placeOrder(@RequestBody Purchase purchase) throws MessagingException, IOException {
             PurchaseResponse purchaseResponse = checkoutService.placeOrder(purchase);
-
             return purchaseResponse;
     }     
     

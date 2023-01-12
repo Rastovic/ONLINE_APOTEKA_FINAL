@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
-import javax.servlet.ServletContext;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -16,8 +16,7 @@ import java.nio.file.Paths;
 public class MailService {
     @Autowired
     private JavaMailSender javaMailSender;
-    @Autowired
-    ServletContext context;
+  
 
     public void sendSimpleMail(EmailDetails details) throws MessagingException, IOException
     {

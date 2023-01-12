@@ -1,28 +1,23 @@
 package com.online.apoteka_final.services;
 
 import com.online.apoteka_final.helpers.EmailDetails;
-import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMailMessage;
 import org.springframework.stereotype.Component;
 import org.springframework.mail.javamail.MimeMessageHelper;
-
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
-import java.io.BufferedReader;
-import java.io.File;
+import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 @Component
 public class MailService {
     @Autowired
     private JavaMailSender javaMailSender;
+    @Autowired
+    ServletContext context;
 
     public void sendSimpleMail(EmailDetails details) throws MessagingException, IOException
     {
@@ -39,7 +34,12 @@ public class MailService {
     }
 
     private String readContent() throws IOException {
-        var path = Paths.get("src/main/java/com/online/apoteka_final/services/mailBody.html");
+       
+     
+       
+        String absolutePath = System.getProperty("user.dir");
+       
+        var path = Paths.get(absolutePath + "/apoteka_final/src/main/java/com/online/apoteka_final/services/mailBody.html");
         return new String(Files.readAllBytes(path));
     }
 }

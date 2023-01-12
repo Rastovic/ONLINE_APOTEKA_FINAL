@@ -42,6 +42,9 @@ public class Address {
 	@Column(name="image_url")
 	private String image_url;
 
+	@Column(name="map_url")
+	private String url;
+
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="address_id", nullable=false)
 	private Pharmacy pharmacy;

@@ -42,6 +42,9 @@ public class Pharmacy {
 
 	@Column(name="image_url")
 	private String image_url;
+
+	@Column(name="mapa")
+	private String mapa;
 	
 	@Column(name="user_password")
 	private String user_password;

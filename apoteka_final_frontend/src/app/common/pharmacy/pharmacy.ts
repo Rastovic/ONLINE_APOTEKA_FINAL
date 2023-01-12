@@ -8,7 +8,8 @@ export class Pharmacy {
         public user_password: string,
         public product_id: number,
         public address_id: number,
-        public image_url: string
+        public image_url: string,
+        public mapa: string
 
     ){}
 }

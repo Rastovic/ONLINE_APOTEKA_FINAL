@@ -1,8 +1,14 @@
 .adresa_apoteke{
-    border: 1px solid black;
-    width: 300px;
+    border: 1px solid rgba(229, 229, 241, 0.353);
+    width: 50%;
     padding: 10px;
     border-radius: 25px;
+    color: rgb(240, 240, 248);
+    height: 350px;
+    background-color: rgba(9, 9, 125, 0.207);
+    font-family: "Times New Roman", Times, serif;
+    font-size:larger;
+
 }
 .naslov{
     text-transform: uppercase;

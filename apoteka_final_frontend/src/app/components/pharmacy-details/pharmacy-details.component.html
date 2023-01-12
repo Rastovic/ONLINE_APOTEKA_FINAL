@@ -4,12 +4,11 @@ right:0;"><app-cart-status></app-cart-status></div>
 <div style="position:absolute;
 top:3cm;
 left:10cm;">
-    <div>
-        <app-address-pharmacy></app-address-pharmacy>
-
-    </div>
+   
 </div>
+
 <div class="detail-section">
+    
     <div class="container-fluid">
 
 
@@ -24,6 +23,15 @@ left:10cm;">
 
 
 
-        <a routerLink="/pharmacies" class="mt-5">Vrati se na listu apoteka</a>
+       
     </div>
 </div>
+<div >
+    <app-address-pharmacy></app-address-pharmacy>
+    
+
+</div>
+<br>
+<iframe  [src]="pharmacy.mapa | safe" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<a routerLink="/pharmacies" class="link">Vrati se na listu apoteka</a>

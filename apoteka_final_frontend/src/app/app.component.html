@@ -1,9 +1,10 @@
 
 <app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
 <app-body
+  style="overflow: hidden"
   [collapsed]="isSideNavCollapsed"
   [screenWidth]="screenWidth"
 ></app-body>
-<app-footer></app-footer>
+
 
 

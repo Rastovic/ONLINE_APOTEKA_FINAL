@@ -1,5 +1,5 @@
 .sidenav {
-  background: linear-gradient(315deg, var(--main-color) 0%, var(--secondary-color) 74%);
+  background: linear-gradient(315deg, #396f7d 0%, #578592 74%);
   transition: all 0.5s ease;
   position: fixed;
   z-index: 1;

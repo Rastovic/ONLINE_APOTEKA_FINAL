@@ -13,6 +13,7 @@ left:10cm;">
 
 <div class="container-fluid">
   <div >
+    <div style="margin-left: 40%;" >
     <img src="{{ pharmacy.image_url }} " class="apoteka_image_details">
     <br>
     <br>
@@ -20,6 +21,7 @@ left:10cm;">
     <h1 >{{ pharmacy.pharmacyname }}</h1>
 
     <h6 >Radno vrijeme: {{ pharmacy.working_hours }}h</h6>
+  </div>
   </div>
   <div>
     <app-products-by-pharmacy></app-products-by-pharmacy>
@@ -31,6 +33,7 @@ left:10cm;">
 
 </div>
 <br>
+
 <iframe class="mapa" [src]="pharmacy.mapa | safe" allowfullscreen="" loading="lazy"
 referrerpolicy="no-referrer-when-downgrade"></iframe>
 

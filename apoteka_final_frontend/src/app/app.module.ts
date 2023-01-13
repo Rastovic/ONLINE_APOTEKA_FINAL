@@ -28,6 +28,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PharmacyByProductComponent } from './components/pharmacy-by-product/pharmacy-by-product.component';
 import { AddressPharmacyComponent } from './components/address-pharmacy/address-pharmacy.component';
 import { SafePipe} from './safe.pipe';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -54,8 +55,9 @@ import { SafePipe} from './safe.pipe';
 
     PharmacyByProductComponent,
     AddressPharmacyComponent,
-    SafePipe
-   
+    SafePipe,
+    FooterComponent
+
 
   ],
 

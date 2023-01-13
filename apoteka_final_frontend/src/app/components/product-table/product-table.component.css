@@ -12,7 +12,7 @@ table th {
 }
 
 .mask-custom {
-  background: rgba(24, 24, 16, .2);
+  background: #396f7d;
   border-radius: 2em;
   backdrop-filter: blur(25px);
   border: 2px solid rgba(255, 255, 255, 0.05);

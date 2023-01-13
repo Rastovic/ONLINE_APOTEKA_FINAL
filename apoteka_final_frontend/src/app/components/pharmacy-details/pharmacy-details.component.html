@@ -17,7 +17,7 @@ left:10cm;">
     <br>
     <br>
 
-    <h1>{{ pharmacy.pharmacyname }}</h1>
+    <h1 style="position:relative;left: 4%">{{ pharmacy.pharmacyname }}</h1>
 
     <h6 style="position:relative;left: 4%">Radno vrijeme: {{ pharmacy.working_hours }}h</h6>
   </div>
@@ -27,10 +27,13 @@ left:10cm;">
 </div>
 <div>
   <app-address-pharmacy></app-address-pharmacy>
+
+
 </div>
 <br>
 <iframe class="mapa" [src]="pharmacy.mapa | safe" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 <div>
   <a routerLink="/pharmacies" class="link">Vrati se na listu apoteka</a>
 </div>

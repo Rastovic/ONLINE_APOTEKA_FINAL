@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Address } from 'src/app/common/address/address';
+import { Pharmacy } from 'src/app/common/pharmacy/pharmacy';
 import { AddressService } from 'src/app/services/address.service';
 
 
@@ -11,8 +12,9 @@ import { AddressService } from 'src/app/services/address.service';
 })
 export class AddressPharmacyComponent implements OnInit{
 
-  
+
 address! : Address;
+pharmacy!: Pharmacy;
 
 
 currentPharmacyId: number=1;

@@ -39,7 +39,22 @@
                             </a>
                           </td>
                           <td class="align-middle">{{ tempProduct.price | currency:'EUR'}}</td>
-                          <td class="align-middle">DA!</td>
+
+
+
+                          <td class="align-middle" >
+                            
+                            
+                            <div class="prescription_true" *ngIf="tempProduct.prescription">
+                              <div class="fa fa-check"></div>
+                      
+                              <div class="prescription_false" *ngIf="!tempProduct.prescription">
+                                  <div class="fa-times"></div>
+                              </div>
+                      
+                      
+                          </div>
+                        </td>
                           <td style="padding-top: 35px;"><button (click)="addToOrder(tempProduct)"
                               class="primary-btn">Add to cart</button></td>
 

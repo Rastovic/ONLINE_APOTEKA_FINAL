@@ -18,7 +18,7 @@ right:0;"><app-cart-status></app-cart-status></div>
 
                     <h1 style="text-transform: uppercase;"><br>{{ product.productName }}</h1>
                     <div>
-                        <h3>Cijena: {{ product.price| currency:'EUR' }}</h3>
+                        <h3>PRICE: {{ product.price| currency:'EUR' }}</h3>
 
                     </div>
                    
@@ -33,12 +33,12 @@ right:0;"><app-cart-status></app-cart-status></div>
 </table>
 
 <div class="product_description">
-    <p>Opis proizvoda: {{product.product_description}}
+    <p>PRODUCT PRESCRIPTION: {{product.product_description}}
     <div class="prescription_true" *ngIf="product.prescription">
-        <span>Potrebno je propisati od strane doktora!</span>
+        <span>NEED PRESCRIPTION FOR THIS PRODUCT!</span>
 
         <div class="prescription_false" *ngIf="!product.prescription">
-            <span>Nije potrebno propisati od strane doktora.</span>
+            <span>Don't need prescription for this product.</span>
         </div>
 
 

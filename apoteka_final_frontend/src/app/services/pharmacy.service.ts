@@ -11,7 +11,7 @@ export class PharmacyService {
 
   private baseUrl='http://localhost:8080/api/pharmacies'
   constructor(private httpClient: HttpClient) { }
-  
+
   getPharmaciesListProdcut(theProductId: number):Observable<Pharmacy[]> {
     const searchUrl =`${this.baseUrl}/search/findByProductId?id=${theProductId}`;
     return this.httpClient.get<GetResponse>(searchUrl).pipe(
@@ -19,20 +19,12 @@ export class PharmacyService {
   );
   }
 
-
-
   getPharmacy(thePharmacyid: number):Observable<Pharmacy> {
 
    const pharmacyUrl=`${this.baseUrl}/${thePharmacyid}`;
 
    return this.httpClient.get<Pharmacy>(pharmacyUrl);
   }
-
-
-
-
- 
-
   getPharmacyList(): Observable<Pharmacy[]>{
     return this.httpClient.get<GetResponse>(this.baseUrl).pipe(
       map(response => response._embedded.pharmacies)

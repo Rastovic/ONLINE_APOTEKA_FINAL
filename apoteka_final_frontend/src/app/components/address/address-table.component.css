@@ -42,14 +42,19 @@ body {
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
   padding: 120px 20px 20px 20px;
   border-radius: 20px;
-  background: #284b9c;
+  background: #c8c2c2;
   margin: -120px 0px 0px 0px;
   line-height: 19px;
   font-size: 14px;
 }
 
+
 .text-container h3 {
   margin: 20px 0px 10px 0px;
-  color: #0d6efd;
+  color: #205b8d;
   font-size: 18px;
+}
+.text-container:hover
+{
+  cursor: pointer;
 }

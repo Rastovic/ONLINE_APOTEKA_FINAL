@@ -1,6 +1,6 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 @import "assets/gradient.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +18,7 @@ body {
   height: 100vh;
 
 }
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -39,32 +40,33 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}/* You can add global styles to this file, and also import other style files */
+}
 
+/* You can add global styles to this file, and also import other style files */
 
 
 /*Layout Css*/
-.section-content-p35{
-    margin-top: 20px;
-    padding:0 35px
+.section-content-p35 {
+  margin-top: 20px;
+  padding: 0 35px
 }
 
-.page-wrapper{
-    overflow:hidden;
-    background:#e5e5e5;
-    padding-bottom:8vh
+.page-wrapper {
+  overflow: hidden;
+  background: #e5e5e5;
+  padding-bottom: 8vh
 }
 
-.page-container{
-    background:#e5e5e5;
-    padding-left:200px
+.page-container {
+  background: #e5e5e5;
+  padding-left: 200px
 }
 
-.main-content{
-    margin-top: 20px;
-    padding:  40px;
-    padding-left:70px;
-    min-height:100vh;
+.main-content {
+  margin-top: 20px;
+  padding: 40px;
+  padding-left: 70px;
+  min-height: 100vh;
 
 }
 
@@ -74,52 +76,54 @@ body {
  * Products List
  * ----------------------------
  */
-.pomeraj{
+.pomeraj {
 
-    
-    width: 100%;
+
+  width: 100%;
 
 }
-.pomeraj1{
-    margin-left: 50px;
+
+.pomeraj1 {
+  margin-left: 50px;
 }
+
 .product-box img {
-    width: 170px;
-    align-items: center;
-}
-.button{
-    background-color:#84b4de;
+  width: 90%;
+  align-items: center;
 }
 
-
-
-.product-box{
-    margin-bottom:60px;
-    border:2px solid rgba(249, 249, 249, 0.106);
-    background-color: rgba(0, 0, 0, 0.1);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 25px;
-    box-shadow:6px 6px 4px #0b0a0a3b
+.button {
+  background-color: #84b4de;
 }
 
 
-
-
-.product-box h1{
-    font-size:18px;
-
-    padding-bottom:5px;
-    font-weight:600;
-    padding-top:12px;
-    margin-bottom:7px
+.product-box {
+  margin-bottom: 60px;
+  border: 2px solid rgba(249, 249, 249, 0.106);
+  background-color: rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+  box-shadow: 6px 6px 4px #0b0a0a3b;
+  min-width: 100px;
 }
-.product-box h2{
-    font-size:20px;
-    padding-bottom:0;
-    font-weight:500;
-    color:#f7f3f3;
-    text-align: center;
+
+
+.product-box h1 {
+  font-size: 18px;
+
+  padding-bottom: 5px;
+  font-weight: 600;
+  padding-top: 12px;
+  margin-bottom: 7px
+}
+
+.product-box h2 {
+  font-size: 20px;
+  padding-bottom: 0;
+  font-weight: 500;
+  color: #f7f3f3;
+  text-align: center;
 }
 
 
@@ -130,100 +134,107 @@ body {
  */
 .search__input {
 
-    width: 60%;
-    padding: 12px 24px;
-    color: rgb(238, 242, 251,.5);
-    background-color: transparent;
-    transition: transform 250ms ease-in-out;
-    font-size: 20px;
-    line-height: 18px;
-    color: rgb(254, 254, 250,.2);
+  width: 60%;
+  padding: 12px 24px;
+  color: rgb(238, 242, 251, .5);
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 20px;
+  line-height: 18px;
+  color: rgb(254, 254, 250, .2);
 
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 
-    border-radius: 25px;
-    border: 2px solid rgb(237, 237, 229,.5);
+  border-radius: 25px;
+  border: 2px solid rgb(237, 237, 229, .5);
 
 
-    padding-left: 30px;
-    color: color(#f8f8f0 a(0.8));
+  padding-left: 30px;
+  color: color(#f8f8f0 a(0.8));
 
-            letter-spacing: 1.5px;
-
+  letter-spacing: 1.5px;
 
 
 }
+
 input::placeholder {
-    color: #c4c9cd;
-    opacity: 1;
-  }
-
-.image_apoteka{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
+  color: #c4c9cd;
+  opacity: 1;
 }
+
+.image_apoteka {
+  border-radius: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
 /*APOTEKA DETAILS */
-.apoteka_image_details
-{
+.apoteka_image_details {
+  border: 2px solid rgb(221, 221, 221, .2);
+  border-radius: 25px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width: 250px;
+  size: auto;
 
-    border: 2px solid rgb(221, 221, 221,.2);
-    border-radius: 25px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 250px;
-    size: auto;
-
 }
 
-.cart-area.d-b{
-  display:block
+.cart-area.d-b {
+  display: block
 }
-.cart-area.d-n{
-  display:none
+
+.cart-area.d-n {
+  display: none
 }
-.cart-area i{
-  font-size:18px;
-  float:left;
-  margin-top:16px;
-  color:#03a9f4;
-  margin-left:15px
+
+.cart-area i {
+  font-size: 18px;
+  float: left;
+  margin-top: 16px;
+  color: #03a9f4;
+  margin-left: 15px
 }
-.primary-btn{
-  background:#05143f;
-  padding:7px 20px;
-  text-align:center;
-  display:inline-block;
-  color:#fff;
-  border-radius:2px;
-  font-size:14px;
-  margin-top:5px
+
+.primary-btn {
+  background: #0987a7;
+  padding: 7px 20px;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 14px;
+  margin-top: 5px
 }
-a.primary-btn:hover{
-  background:#0da8e4;
-  color:#fff
+
+a.primary-btn:hover {
+  background: #0da8e4;
+  color: #fff
 }
 
 /*product DETAILS */
-.prescription_true{
+.prescription_true {
   color: red;
   letter-spacing: 1.5px;
 }
-.prescription_false{
+
+.prescription_false {
   color: green;
-  letter-spacing:1.5px;
+  letter-spacing: 1.5px;
 }
-.product_description{
-  border: 2px solid rgb(3, 27, 78,0.5);
+
+.product_description {
+  border: 2px solid rgb(3, 27, 78, 0.5);
   border-radius: 25px;
   background-color: #3e62b8;
   padding: 10px;
   width: 600px;
- position:absolute;
-  top:20px;
-  left:300px;
-  
+  position: absolute;
+  top: 20px;
+  left: 300px;
+
 
 }

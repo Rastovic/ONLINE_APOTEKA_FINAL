@@ -1,5 +1,5 @@
 .primary-btn{
-  background: #031B4E;
+  background: #0987a7;
   padding:7px 20px;
   text-align:center;
   display:inline-block;
@@ -9,7 +9,7 @@
   font-size:14px;
   margin-top:5px
 }
-a.primary-btn:hover{
+.primary-btn:hover{
   background:#0da8e4;
   color:#fff
 }

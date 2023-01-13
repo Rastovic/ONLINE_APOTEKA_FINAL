@@ -1,10 +1,10 @@
 .link {
-    color: rgb(20, 134, 53);
-    text-transform: uppercase;
-    border: 2px solid rgb(0, 0, 0, .5);
-    border-radius: 25px;
-    padding: 10px;
-    font-family: "Times New Roman", Times, serif;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 25px;
+  padding: 10px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .mapa {

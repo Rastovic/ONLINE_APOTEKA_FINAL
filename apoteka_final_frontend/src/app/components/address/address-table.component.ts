@@ -27,8 +27,8 @@ export class AddressTableComponent implements OnInit {
     )
   }
 
-  allPharmaciesByTown(town:string){
-    this.pharmacyService.getPharmaciesByTown(town).subscribe(data=>console.log(data));
+  allPharmaciesByTown(town: string) {
+    this.pharmacyService.getPharmaciesByTown(town).subscribe(data => console.log(data));
   }
 
 }

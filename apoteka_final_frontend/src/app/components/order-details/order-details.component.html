@@ -1,58 +1,49 @@
-
-        <div *ngIf="orderItem.length > 0">
-          <table class="table">
-              <tr>
-                  <th width="20%">Product Image</th>
-                  <th width="50%">Product Detail</th>
-                  <th width="30%"></th>
-              </tr>
-
-              <tr *ngFor="let tempOrderitem of orderItem">
-                  <td>
-                      <img src="{{ tempOrderitem.image_url }}" class="img-responsive" width="150px" />
-                  </td>
-                  <td>
-                      <p>{{ tempOrderitem.product_name }}</p>
-                      <p>{{ tempOrderitem.price | currency: 'EUR' }}</p>
-                  </td>
-                  <td>
-                      <div class="items">
-                          <label>Quantity:</label>
-                          <div>
-                            <button class = "primary-btn" (click)="incrementQuantity(tempOrderitem)">
-                              <i class="fa fa-plus"></i>
-                            </button>
-                          </div>
-                          <div class="col ml-4 mr-2">
-                            {{tempOrderitem.quantity}}
-                          </div>
-                          <div>
-                            <button class = "primary-btn" (click)="decrementQuantity(tempOrderitem)">
-                              <i class="fa fa-minus"></i>
-                            </button>
-                          </div>
-                          <div></div>
-                      </div >
-                      <button class = "primary-btn" (click)="remove(tempOrderitem)">Remove</button>
-                      <p class="mt-2">Subtotal: {{ tempOrderitem.quantity * tempOrderitem.price | currency: 'EUR' }}</p>
-                  </td>
-              </tr>
-
-              <tr >
-                  <td colspan="2"></td>
-                  <td style="font-weight: bold">
-                      <p>Total Quantity: {{ totalQuantity }}</p>
-                      <p>Total Price: {{ totalPrice | currency: 'EUR' }}</p>
-                      <a routerLink="/checkout" class="primary-btn">Checkout</a>
-                  </td>
-              </tr>
-
-          </table>
+<div *ngIf="orderItem.length > 0">
+  <table class="table">
+    <tr>
+      <th width="33%">Product Image</th>
+      <th width="33%">Product Detail</th>
+      <th width="34%">Quantity:</th>
+    </tr>
+    <tr *ngFor="let tempOrderitem of orderItem">
+      <td>
+        <img src="{{ tempOrderitem.image_url }}" class="img-responsive" width="150px"/>
+      </td>
+      <td>
+        <h4>{{ tempOrderitem.product_name }}</h4>
+      </td>
+      <td>
+        <div class="items">
+          <div>
+            <button style="margin-right: 10px" class="primary-btn" (click)="decrementQuantity(tempOrderitem)">
+              <i class="fa fa-minus"></i>
+            </button>
+            {{tempOrderitem.quantity}}
+            <button style="margin-left: 10px" class="primary-btn" (click)="incrementQuantity(tempOrderitem)">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+          <div></div>
         </div>
-       <div *ngIf="orderItem.length == 0">
-        <h1 style="text-align: center; padding-top: 300px;">Your Order is Empty</h1>
-        <button class="primary-btn" routerLink="/products" style="margin-left: 627px; margin-top: 30px;">Back To Products</button>
+        <button class="primary-btn" (click)="remove(tempOrderitem)">Remove</button>
+        <p class="mt-2">Subtotal: {{ tempOrderitem.quantity * tempOrderitem.price | currency: 'EUR' }}</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td style="font-weight: bold">
+        <p>Total Quantity: {{ totalQuantity }}</p>
+        <p>Total Price: {{ totalPrice | currency: 'EUR' }}</p>
+        <a routerLink="/checkout" style="margin-bottom: 20px" class="primary-btn">Checkout</a>
+      </td>
+    </tr>
+  </table>
+</div>
+<div *ngIf="orderItem.length == 0">
+  <h1 style="text-align: center; padding-top: 300px;">Your Order is Empty</h1>
+  <button class="primary-btn" routerLink="/products" style="margin-left: 627px; margin-top: 30px;">Back To Products
+  </button>
 
 
-      </div>
+</div>
 

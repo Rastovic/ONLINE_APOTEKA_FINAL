@@ -9,6 +9,7 @@ right:0;"><app-cart-status></app-cart-status></div>
 
                 <div *ngFor="let tempPharmacy of pharmacies" class="col-md-3">
                     <div class="product-box">
+
                         <a routerLink="/pharmacies/{{ tempPharmacy.id }}">
                             <img src="{{ tempPharmacy.image_url}}" class="image_apoteka">
 

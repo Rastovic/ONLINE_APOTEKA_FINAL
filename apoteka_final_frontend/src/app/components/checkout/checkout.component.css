@@ -8,11 +8,12 @@
   margin-bottom:50px
 }
 .input-space input[type=text]{
+
   background: transparent;
   height:40%;
   width: 40%;
   padding: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 8px;
   border: none;
   border-left: 1px solid white;
   border-top: 1px solid white;

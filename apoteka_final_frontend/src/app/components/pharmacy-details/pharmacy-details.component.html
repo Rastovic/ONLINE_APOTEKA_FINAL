@@ -1,37 +1,36 @@
 <div style="position:absolute;
 top:0;
-right:0;"><app-cart-status></app-cart-status></div>
+right:0;">
+  <app-cart-status></app-cart-status>
+</div>
 <div style="position:absolute;
 top:3cm;
 left:10cm;">
-   
+
+
 </div>
 
-<div class="detail-section">
-    
-    <div class="container-fluid">
 
+<div class="container-fluid">
+  <div style="position: relative; left: 40%">
+    <img src="{{ pharmacy.image_url }} " class="apoteka_image_details">
+    <br>
+    <br>
 
-        <img src="{{ pharmacy.image_url }} " class="apoteka_image_details">
+    <h1>{{ pharmacy.pharmacyname }}</h1>
 
-        <h1>{{ pharmacy.pharmacyname }}</h1>
-        <div>
-            <h2>Radno vrijeme: {{ pharmacy.working_hours }}h</h2>
-            <app-products-by-pharmacy></app-products-by-pharmacy>
-        </div>
-
-
-
-
-       
-    </div>
+    <h6 style="position:relative;left: 4%">Radno vrijeme: {{ pharmacy.working_hours }}h</h6>
+  </div>
+  <div>
+    <app-products-by-pharmacy></app-products-by-pharmacy>
+  </div>
 </div>
-<div >
-    <app-address-pharmacy></app-address-pharmacy>
-    
-
+<div>
+  <app-address-pharmacy></app-address-pharmacy>
 </div>
 <br>
-<iframe class="mapa"  [src]="pharmacy.mapa | safe"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-<a routerLink="/pharmacies" class="link">Vrati se na listu apoteka</a>
+<iframe class="mapa" [src]="pharmacy.mapa | safe" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div>
+  <a routerLink="/pharmacies" class="link">Vrati se na listu apoteka</a>
+</div>

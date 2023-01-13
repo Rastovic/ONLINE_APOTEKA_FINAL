@@ -1,14 +1,8 @@
 .footer-basic {
-<<<<<<< Updated upstream
-  height: 20%;
-  background-color:#F4BAA9;
-  color:white;
-=======
   padding: 1px 0;
   background-image: url("/assets/images/futer4.jpg");
   background-position: bottom;
   color:black;
->>>>>>> Stashed changes
 }
 
 .footer-basic ul {
@@ -62,13 +56,10 @@
   margin-top:15px;
   text-align:center;
   font-size:13px;
-<<<<<<< Updated upstream
   color:white;
   margin-bottom:0;
-=======
   color:black;
   margin-bottom:8px;
->>>>>>> Stashed changes
 }
 
 

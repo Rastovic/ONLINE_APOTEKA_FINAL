@@ -8,7 +8,7 @@ export class Address{
     public street_name: string,
     public street_number: number,
     public image_url:string,
-    public url:string
+    
   ) {
 
   }

@@ -35,6 +35,8 @@
   background-color: #aab1c0;
   padding: 10px;
   width: 600px;
+  max-height: 60%;
+  overflow: auto;
   position: absolute;
   top: 20px;
   left: 300px;

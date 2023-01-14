@@ -1,5 +1,6 @@
-package com.online.apoteka_final.services;
+package com.online.apoteka_final.controllers;
 
+import com.online.apoteka_final.services.CheckoutService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

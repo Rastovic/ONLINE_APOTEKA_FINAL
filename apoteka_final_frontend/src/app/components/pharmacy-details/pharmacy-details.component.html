@@ -1,0 +1,47 @@
+<div style="position:absolute;
+top:0;
+right:0;">
+  <app-cart-status></app-cart-status>
+</div>
+<div style="position:absolute;
+top:3cm;
+left:10cm;">
+
+
+</div>
+
+
+<div class="container-fluid">
+  <div>
+    <div style="display: flex; justify-content: center;">
+      <img src="{{ pharmacy.image_url }} " class="apoteka_image_details">
+    </div>
+    <div>
+      <br>
+
+      <div style="display: flex; justify-content: center;">
+        <h1>{{ pharmacy.pharmacyname }}</h1>
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <h5>Working: {{ pharmacy.working_hours }}h</h5>
+      </div>
+    </div>
+  </div>
+  <div>
+    <app-products-by-pharmacy></app-products-by-pharmacy>
+  </div>
+
+  <div>
+    <app-address-pharmacy></app-address-pharmacy>
+
+
+  </div>
+  <br>
+
+  <iframe class="mapa" [src]="pharmacy.mapa | safe" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <div>
+    <h6 routerLink="/pharmacies" class="link">Go back on List of Pharmacies</h6>
+  </div>
+</div>

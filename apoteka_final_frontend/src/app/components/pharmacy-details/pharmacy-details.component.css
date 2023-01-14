@@ -1,0 +1,19 @@
+.link {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  padding: 10px;
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.mapa {
+
+    width: 30%;
+    height: 300px;
+    border:0;
+    position: relative;
+    bottom: 365px;
+    left: 35%;
+
+}

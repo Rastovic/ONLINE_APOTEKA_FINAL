@@ -1,0 +1,30 @@
+<div style="position:absolute;
+top:0;
+right:0;">
+  <app-cart-status></app-cart-status>
+</div>
+
+<table>
+
+  <tr>
+
+    <td class="main-content">
+      <div class="a-box" style="padding: 13px" *ngFor="let tempAddress of addresses"
+      >
+        <div class="img-container">
+          <div class="img-inner">
+            <div class="inner-skew">
+              <img
+                src="assets/images/cities/{{tempAddress.town}}.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="text-container">
+          <a routerLink="/pharmacies/town/{{ tempAddress.town }}">
+            <h3>{{tempAddress.town}}</h3></a>
+        </div>
+      </div>
+    </td>
+
+  </tr>
+</table>

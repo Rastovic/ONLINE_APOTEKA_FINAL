@@ -1,0 +1,85 @@
+<section class="intro">
+  <div class="bg-image h-100">
+    <div style="position:absolute;
+                          top:0;
+                          right:0;"><app-cart-status></app-cart-status></div>
+    <table>
+      <tr>
+        <td width="40%"><app-search></app-search></td>
+      </tr>
+    </table>
+    <div class="mask d-flex align-items-top h-100" style="padding-top: 20px;">
+      <div class="pomeraj">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12">
+              <div class="card mask-custom">
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-borderless text-white mb-0">
+                      <thead>
+                        <tr>
+                          <th scope="col">IMAGE</th>
+                          <th scope="col">PRODUCT</th>
+                          <th scope="col">PRICE</th>
+                          <th scope="col">PRESCRIPTION</th>
+
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let tempProduct of products">
+                          <td class="align-middle">
+
+                            <img src="{{ tempProduct.image_url }}" height="100" />
+
+                          </td>
+                          <td class="align-middle">
+                            <a style="color:yellow;" routerLink="/products/{{ tempProduct.id }}">
+                              {{ tempProduct.productName}}
+                            </a>
+                          </td>
+                          <td class="align-middle">{{ tempProduct.price | currency:'EUR'}}</td>
+
+
+
+                          <td class="align-middle">
+
+                            <div style="padding-left: 20%;">
+                            <div *ngIf="tempProduct.prescription">
+                              <div class="fa fa-check"></div>
+                            </div>
+                            <div *ngIf="!tempProduct.prescription">
+                              <div class="fa fa-close"></div>
+                            </div>
+
+
+                            </div>
+                          </td>
+                          <td style="padding-top: 35px;"><button (click)="addToOrder(tempProduct)"
+                              class="primary-btn">Add to cart</button></td>
+
+                        </tr>
+                        <!-- <a routerLink="/products/{{ tempProduct.id }}">IN</a> -->
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="products?.length==0" class="alert alert-warning" role="alert">
+            Not found
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

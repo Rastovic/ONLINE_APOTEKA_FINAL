@@ -1,0 +1,30 @@
+<!-- MAIN CONTENT-->
+
+
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <div *ngFor="let tempProduct of products" class="col-md-3">
+                    <div class="product-box">
+
+                        <a routerLink="/pharmacies/{{currentPharmacyId}}/products/{{tempProduct.id}}">
+                            <img src="{{ tempProduct.image_url}}" class="image_apoteka">
+                        </a>
+
+
+
+                            
+
+
+
+                      
+                        <h1 class="link" routerLink="/pharmacies/{{currentPharmacyId}}/products/{{tempProduct.id}}">{{tempProduct.productName}}</h1>
+                    
+
+
+                        <h2>{{ tempProduct.price | currency:'EUR'}}</h2>
+                    </div>
+                </div>
+            </div>
+

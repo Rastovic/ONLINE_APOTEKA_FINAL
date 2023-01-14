@@ -1,6 +1,6 @@
 package com.online.apoteka_final.entity;
 
-
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.*;
@@ -16,9 +16,11 @@ public class Product {
 	@Column(name="product_id", nullable = false)
     private int id;
 
+	
 	@Column(name = "image_url")
     private String image_url;
 
+	
 	@Column(name="product_name")
 	private String productName;
 	

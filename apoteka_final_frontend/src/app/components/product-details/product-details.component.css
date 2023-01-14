@@ -1,0 +1,47 @@
+.primary-btn{
+  background: #0987a7;
+  padding:7px 20px;
+  text-align:center;
+  display:inline-block;
+  color:#fff;
+  border:0;
+  border-radius:8px;
+  font-size:14px;
+  margin-top:5px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.primary-btn:hover{
+  background:#0da8e4;
+  color:#fff
+}
+.details{
+  margin-left: 15px;
+}
+.prescription_true {
+  color: red;
+  letter-spacing: 1.5px;
+
+}
+
+.prescription_false {
+  color: green;
+  letter-spacing: 1.5px;
+}
+
+.product_description {
+  border: 2px solid rgb(3, 27, 78, 0.5);
+  border-radius: 25px;
+  background-color: #aab1c0;
+  padding: 10px;
+  width: 600px;
+  max-height: 60%;
+  overflow: auto;
+  position: absolute;
+  top: 20px;
+  left: 300px;
+  color: black;
+  margin-left: 10%;
+
+
+}

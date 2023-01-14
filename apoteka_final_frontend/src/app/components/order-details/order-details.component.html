@@ -1,0 +1,49 @@
+<div *ngIf="orderItem.length > 0">
+  <table  class="table1">
+    <tr>
+      <th width="33%"><h3>Product Image</h3></th>
+      <th width="33%"><h3>Product Detail</h3></th>
+      <th width="34%"><h3>Quantity:</h3></th>
+    </tr>
+    <tr *ngFor="let tempOrderitem of orderItem">
+      <td>
+        <img src="{{ tempOrderitem.image_url }}" class="img-responsive" width="150px"/>
+      </td>
+      <td>
+        <h4>{{ tempOrderitem.product_name }}</h4>
+      </td>
+      <td>
+        <div class="items">
+          <div>
+            <button style="margin-right: 10px" class="primary-btn" (click)="decrementQuantity(tempOrderitem)">
+              <i class="fa fa-minus"></i>
+            </button>
+            {{tempOrderitem.quantity}}
+            <button style="margin-left: 10px" class="primary-btn" (click)="incrementQuantity(tempOrderitem)">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+          <div></div>
+        </div>
+        <button class="primary-btn" (click)="remove(tempOrderitem)">Remove</button>
+        <p class="mt-2">Subtotal: {{ tempOrderitem.quantity * tempOrderitem.price | currency: 'EUR' }}</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td style="font-weight: bold">
+        <p>Total Quantity: {{ totalQuantity }}</p>
+        <p>Total Price: {{ totalPrice | currency: 'EUR' }}</p>
+        <a routerLink="/checkout" style="margin-bottom: 20px" class="primary-btn">Checkout</a>
+      </td>
+    </tr>
+  </table>
+</div>
+<div *ngIf="orderItem.length == 0">
+  <h1 style="text-align: center; padding-top: 200px;">Your Order is Empty</h1>
+  <button class="primary-btn" routerLink="/products" style="margin-left: 45%; margin-top: 30px;">Back To Products
+  </button>
+
+
+</div>
+

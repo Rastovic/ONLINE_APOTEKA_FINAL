@@ -5,14 +5,16 @@
   border-radius: 25px;
   padding: 10px;
   font-family: "Times New Roman", Times, serif;
+  margin-left: 15px;
 }
 
 .mapa {
 
     width: 30%;
-    height: 50%;
+    height: 300px;
     border:0;
     position: relative;
-    bottom: 53%;
+    bottom: 365px;
     left: 35%;
+   
 }

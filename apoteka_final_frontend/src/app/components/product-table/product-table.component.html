@@ -34,32 +34,32 @@
 
                           </td>
                           <td class="align-middle">
-                            <a style="color:rgb(179, 255, 0);"routerLink="/products/{{ tempProduct.id }}">
-                            {{ tempProduct.productName}}
+                            <a style="color:yellow;" routerLink="/products/{{ tempProduct.id }}">
+                              {{ tempProduct.productName}}
                             </a>
                           </td>
                           <td class="align-middle">{{ tempProduct.price | currency:'EUR'}}</td>
 
 
 
-                          <td class="align-middle" >
-                            
-                            
-                            <div class="prescription_true" *ngIf="tempProduct.prescription">
+                          <td class="align-middle">
+
+                            <div style="padding-left: 20%;">
+                            <div *ngIf="tempProduct.prescription">
                               <div class="fa fa-check"></div>
-                      
-                              <div class="prescription_false" *ngIf="!tempProduct.prescription">
-                                  <div class="fa-times"></div>
-                              </div>
-                      
-                      
-                          </div>
-                        </td>
+                            </div>
+                            <div *ngIf="!tempProduct.prescription">
+                              <div class="fa fa-close"></div>
+                            </div>
+
+
+                            </div>
+                          </td>
                           <td style="padding-top: 35px;"><button (click)="addToOrder(tempProduct)"
                               class="primary-btn">Add to cart</button></td>
 
                         </tr>
-<!-- <a routerLink="/products/{{ tempProduct.id }}">IN</a> -->
+                        <!-- <a routerLink="/products/{{ tempProduct.id }}">IN</a> -->
                       </tbody>
                     </table>
 

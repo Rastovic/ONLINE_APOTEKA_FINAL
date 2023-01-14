@@ -36,18 +36,13 @@ public class Pharmacy {
 	
 	@Column(name="working_hours")
 	private String working_hours;
-	
-	@Column(name="user_name")
-	private String user_name;
 
 	@Column(name="image_url")
 	private String image_url;
 
 	@Column(name="mapa")
 	private String mapa;
-	
-	@Column(name="user_password")
-	private String user_password;
+
 	
 	@ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.DETACH,CascadeType.REFRESH,CascadeType.MERGE})
 	@JoinTable(name="pharmacy_product",

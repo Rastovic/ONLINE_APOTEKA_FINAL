@@ -7,17 +7,15 @@
 
 }
 
-.table{
-
-
+.table1{
  margin: 100px auto;
  text-align:center;position:relative;
  color:#fff;
- width: 100%;
+ width: 96%;
  border-collapse: collapse;
  background-color: #396f7d;
  border-radius: 2em;
-border:0}
+  border:0}
 
 tr {
 text-align: bottom;
@@ -38,6 +36,9 @@ text-align: bottom;
 .primary-btn:hover{
   background:#0da8e4;
   color:#fff
+}
+h3,h4,p{
+  font-family: 'Roboto', sans-serif;
 }
 
 

@@ -38,6 +38,7 @@ public class Address {
 
 	@Column(name = "street_number")
 	private String street_number;
+	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="address_id", nullable=false)
 	private Pharmacy pharmacy;

@@ -33,7 +33,9 @@ public class MailService {
     }
 
     private String readContent() throws IOException {
-        var path = Paths.get("src/main/java/com/online/apoteka_final/services/mailBody.html");
+
+        String absPath = System.getProperty("user-dir");
+        var path = Paths.get(absPath + "/apoteka_final/src/main/java/com/online/apoteka_final/services/mailBody.html");
 
         return new String(Files.readAllBytes(path));
     }

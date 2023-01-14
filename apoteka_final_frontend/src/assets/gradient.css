@@ -1,7 +1,0 @@
-.custom-gradient{
-  background-image: linear-gradient(315deg, var(--secondary-color) 0%, var(--main-color) 74%)
-}
-
-.custom-gradient-reverse{
-  background-image: linear-gradient(315deg, var(--main-color) 0%, var(--secondary-color) 74%)
-}

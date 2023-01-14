@@ -21,7 +21,7 @@ export class PharmacyByProductComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe(() => {
       this.listPharmacies();
-    }); 
+    });
   }
 
   listPharmacies() {

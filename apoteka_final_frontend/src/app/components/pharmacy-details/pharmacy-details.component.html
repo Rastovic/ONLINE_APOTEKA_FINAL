@@ -12,31 +12,36 @@ left:10cm;">
 
 
 <div class="container-fluid">
-  <div  >
-    <div style="margin-left: 40%;" >
-    <img src="{{ pharmacy.image_url }} " class="apoteka_image_details">
-    <br>
-    <br>
+  <div>
+    <div style="display: flex; justify-content: center;">
+      <img src="{{ pharmacy.image_url }} " class="apoteka_image_details">
+    </div>
+    <div>
+      <br>
 
-    <h1 >{{ pharmacy.pharmacyname }}</h1>
-
-    <h6 style="margin-left: 4%;">Working: {{ pharmacy.working_hours }}h</h6>
-  </div>
+      <div style="display: flex; justify-content: center;">
+        <h1>{{ pharmacy.pharmacyname }}</h1>
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <h5>Working: {{ pharmacy.working_hours }}h</h5>
+      </div>
+    </div>
   </div>
   <div>
     <app-products-by-pharmacy></app-products-by-pharmacy>
   </div>
-</div>
-<div>
-  <app-address-pharmacy></app-address-pharmacy>
+
+  <div>
+    <app-address-pharmacy></app-address-pharmacy>
 
 
-</div>
-<br>
+  </div>
+  <br>
 
-<iframe class="mapa" [src]="pharmacy.mapa | safe" allowfullscreen="" loading="lazy"
-referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe class="mapa" [src]="pharmacy.mapa | safe" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-<div>
-  <h6 routerLink="/pharmacies" class="link">Go back on List of Pharmacies</h6>
+  <div>
+    <h6 routerLink="/pharmacies" class="link">Go back on List of Pharmacies</h6>
+  </div>
 </div>

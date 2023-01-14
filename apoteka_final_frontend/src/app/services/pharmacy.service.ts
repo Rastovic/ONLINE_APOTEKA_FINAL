@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Pharmacy } from '../common/pharmacy/pharmacy';
 import {map} from 'rxjs/operators'
+import * as http from "http";
 
 @Injectable({
   providedIn: 'root'
@@ -25,14 +26,20 @@ export class PharmacyService {
 
    return this.httpClient.get<Pharmacy>(pharmacyUrl);
   }
-  getPharmacyList(): Observable<Pharmacy[]>{
+ /* getPharmacyList(): Observable<Pharmacy[]>{
     return this.httpClient.get<GetResponse>(this.baseUrl).pipe(
+      map(response => response._embedded.pharmacies)
+    )
+  }*/
+
+  getPharmaciesByTown(town: string): Observable<Pharmacy[]>{
+    return this.httpClient.get<GetResponse>(`${this.baseUrl}/search/findAllByAddress_Town?town=${town}`).pipe(
       map(response => response._embedded.pharmacies)
     )
   }
 
-  getPharmaciesByTown(town: string): Observable<Pharmacy[]>{
-    return this.httpClient.get<GetResponse>(`${this.baseUrl}/search/findAllByAddress_Town?town=${town}`).pipe(
+  getPharmacyList():Observable<Pharmacy[]>{
+    return this.httpClient.get<GetResponse>(`${this.baseUrl}/search/findAllDistinctPharmacies`).pipe(
       map(response => response._embedded.pharmacies)
     )
   }

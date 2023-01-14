@@ -11,13 +11,13 @@ right:0;"><app-cart-status></app-cart-status></div>
                     <div class="product-box">
 
                         <a routerLink="/pharmacies/{{ tempPharmacy.id }}">
-                            <img src="{{ tempPharmacy.image_url}}" class="image_apoteka">
+                            <img  src="{{ tempPharmacy.image_url}}" class="image_apoteka">
 
                         </a>
 
-                        <a routerLink="/pharmacies/{{tempPharmacy.id }}">
-                            <h1 style="text-align: center;">{{ tempPharmacy.pharmacyname}}</h1>
-                        </a>
+                        
+                            <h1 routerLink="/pharmacies/{{tempPharmacy.id }}" style="text-align: center;color:yellow;cursor: pointer;">{{ tempPharmacy.pharmacyname}}</h1>
+                        
                         <h1 style="text-align: center;">Working:</h1>
                         <h2>{{ tempPharmacy.working_hours}}h</h2>
                     </div>

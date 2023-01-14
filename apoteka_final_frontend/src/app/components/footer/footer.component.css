@@ -1,4 +1,8 @@
 .footer-basic {
+  padding: 1px 0;
+  background-image: url("/assets/images/futer4.jpg");
+  background-position: bottom;
+  color:black;
 
 }
 

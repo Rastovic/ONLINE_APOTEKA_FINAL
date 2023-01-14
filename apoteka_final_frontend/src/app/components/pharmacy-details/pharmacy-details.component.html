@@ -12,7 +12,7 @@ left:10cm;">
 
 
 <div class="container-fluid">
-  <div >
+  <div  >
     <div style="margin-left: 40%;" >
     <img src="{{ pharmacy.image_url }} " class="apoteka_image_details">
     <br>
@@ -20,7 +20,7 @@ left:10cm;">
 
     <h1 >{{ pharmacy.pharmacyname }}</h1>
 
-    <h6 >Working: {{ pharmacy.working_hours }}h</h6>
+    <h6 style="margin-left: 4%;">Working: {{ pharmacy.working_hours }}h</h6>
   </div>
   </div>
   <div>
@@ -38,5 +38,5 @@ left:10cm;">
 referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <div>
-  <a routerLink="/pharmacies" class="link">Go back on List of Pharmacies</a>
+  <h6 style="position: relative;bottom: 20px;" routerLink="/pharmacies" class="link">Go back on List of Pharmacies</h6>
 </div>

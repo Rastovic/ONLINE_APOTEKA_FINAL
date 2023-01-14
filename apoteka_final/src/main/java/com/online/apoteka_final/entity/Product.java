@@ -29,21 +29,10 @@ public class Product {
 	
 	@Column(name="price")
 	private float price;
-	@Column(name="expiration_date")
-	private Date expiration_date;
-
-	@Column(name="availability")
-	private boolean availability;
 	
 	@Column(name="prescription")
 	private boolean prescription;
 
-	
-	
-	@OneToOne
-	@JoinColumn(name = "supplier_id", nullable = false)
-	private Supplier supplier;
-	
 	@ManyToMany(fetch = FetchType.LAZY,cascade = {CascadeType.PERSIST,CascadeType.DETACH,CascadeType.REFRESH,CascadeType.MERGE})
 	@JoinTable(name="pharmacy_product",
 				joinColumns = @JoinColumn(name="product_id"),

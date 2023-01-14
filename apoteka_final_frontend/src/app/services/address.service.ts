@@ -16,15 +16,15 @@ export class AddressService {
   private baseUrl='http://localhost:8080/api/address'
   constructor(private httpClient: HttpClient) { }
   getAddressList():Observable<Address[]>{
-    return this.httpClient.get<GetResponse>(this.baseUrl).pipe(
+    return this.httpClient.get<GetResponse>(`${this.baseUrl}/search/findAllDistinctTowns`).pipe(
       map(response => response._embedded.address)
     );
   }
-  
+
   getAddress(theAddressid: number):Observable<Address> {
 
     const addressUrl=`${this.baseUrl}/${theAddressid}`;
- 
+
     return this.httpClient.get<Address>(addressUrl);
    }
 }
